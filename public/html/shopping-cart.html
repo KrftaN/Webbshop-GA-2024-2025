@@ -7,23 +7,6 @@
     <link href="../css/nav-style.css" rel="stylesheet">
 </head>
 <body>
-    <main> <!--Finns nog mycket som är fel men som sagt har bara skapat detta som en grund-->
-        <form action="index.html" method="post"> <!--Här är mitt formulär, här har jag en action vilket är vart man hamnar efter man tryckt på submit, använder metod post vilket skickar informationen genom bodyn separat medans get (den andra metoden) skickar det genom URL:en-->
-            <label for="username">Användarnamn:</label> <!--Kopplad till min input och visar texten Användarnamn:-->
-            <input type="text" id="username" name="username" placeholder="Ange användarnamn" pattern="[a-öA-Ö0-9]+" required> <!--En input med typ text som har id och name username vilket gör att jag kan länka label till den, har även en placeholder vilket visar text medans användaren inte matat in något i rutan. Har också en pattern vilket definerar vad som användaren får mata in, användaren får inte mata in tecken utanför dessa, har också en required vilket gör att jag inte kan klicka submit utan att fylla i den -->
-            
-            <label for="password">Lösenord:</label>
-            <input type="password" id="password" name="password" placeholder="Ange lösenord" required> <!--Typ lösernord, gör texten till svarta prickar istället för att vissa användarens inputs för att ge användaren privicy med sitt lösernord-->
-            
-            <label for="email">E-post:</label>
-            <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required> <!--Email, den kan märka ifall de användaren skrivit liknar en email eller om den bara skrivit något annat, det räknas inte ifall användaren inte matat in något som datorn tror är en email-->
-            
-            <input type="checkbox" id="checkbox" name="checkbox" value="kom ihåg mig">
-            <label for="checkbox">Kom ihåg mig</label><br>
-        
-            <button type="submit">Logga in</button> <!--En knapp för att skicka in användarens inmatning och skicka användaren till action sidan-->
-            <button>Skapa konto</button> <!--En knapp-->
-        </form>
-    </main>
+    
 </body>
 </html>
