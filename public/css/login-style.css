@@ -1,63 +1,79 @@
-form {
-    border: 2px solid #f1f1f1;
-    padding: 10px; /* Optimized for mobile spacing */
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center form content vertically */
+h1{
+  text-align: center;
+}
+
+.form {
+  border: 2px solid #f1f1f1;
+  padding: 10px; /* Optimized for mobile spacing */
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+}
+  
+input[type=text], input[type=password] {
+  width: 100%; /* Full width for smaller screens */
+  padding: 15px 15px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+label{
+  font-size: 22px;
+}
+
+input[type=checkbox]{
+  width: 28px;
+  height: 28px;
+  margin-top: 0;
+}
+
+section{
+  display: flex;
+  height: 28px;
+  flex-direction: row;
+  align-items: center;
+}
+
+button{
+  background-color: #d8d7d7;
+  color: rgb(58, 58, 58);
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Full width buttons for mobile */
+  font-size: 22px;
+}
+
+button[type=submit]{
+  background-color: #04AA6D;
+  color: white;
+}
+  
+button:hover {
+  opacity: 0.8;
+}
+  
+/* Styles for larger screens (PC and desktops) */
+@media screen and (min-width: 768px) {
+  .form {
+    border: 3px solid #f1f1f1; /* Larger border for bigger screens */
+    padding: 20px; /* Add more padding for spacious layout */
+    width: 50%; /* Center form for desktop view */
+    margin: 0 auto;
   }
   
   input[type=text], input[type=password] {
-    width: 100%; /* Full width for smaller screens */
-    padding: 15px 15px;
-    margin: 10px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 20px;
-  }
-
-  label{
-    font-size: 22px;
-  }
-
-  input[type=checkbox]{
-    
+    padding: 12px 20px; /* Larger inputs for desktop */
+    font-size: 16px; /* Increase font size for readability */
   }
   
   button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 18px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%; /* Full width buttons for mobile */
-    font-size: 22px;
+    padding: 14px 20px; /* Adjust button size for desktop */
+    font-size: 18px; /* Larger button text */ 
   }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Styles for larger screens (PC and desktops) */
-  @media screen and (min-width: 768px) {
-    form {
-      border: 3px solid #f1f1f1; /* Larger border for bigger screens */
-      padding: 20px; /* Add more padding for spacious layout */
-      width: 50%; /* Center form for desktop view */
-      margin: 0 auto;
-    }
-  
-    input[type=text], input[type=password] {
-      padding: 12px 20px; /* Larger inputs for desktop */
-      font-size: 16px; /* Increase font size for readability */
-    }
-  
-    button {
-      padding: 14px 20px; /* Adjust button size for desktop */
-      font-size: 18px; /* Larger button text */
-      width: auto; /* Buttons don't need to span full width */
-    }
-  }
+}
   
