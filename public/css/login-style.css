@@ -1,13 +1,30 @@
-h1{
+.wrapper{
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  height: 98vh;
+}
+
+main{
+  display: grid;
+  grid-area: main;
+}
+
+h2{
+  font-size:50px;
   text-align: center;
 }
 
 .form {
   border: 2px solid #f1f1f1;
-  padding: 10px; /* Optimized for mobile spacing */
-  min-height: 80vh;
+  padding: 10px; 
+  height: auto;
   display: flex;
-  flex-direction: column; /* Align items vertically */
+  flex-direction: column; 
+  justify-content: center;
 }
   
 input[type=text], input[type=password] {

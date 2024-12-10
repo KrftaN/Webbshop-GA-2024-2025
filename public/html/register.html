@@ -5,8 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrera</title>
     <link href="../css/nav-style.css" rel="stylesheet">
+    <link href="../css/login-style.css" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <header>
+            
+        </header>
+        <main> 
+            <h2>Skapa konto</h2>
+            <div class="form">
+                <form action="index.html" method="post"> 
+                    <label for="first name">Förnamn:</label> 
+                    <input type="text" id="first name" name="first name" placeholder="Ange förnamn" pattern="[a-öA-Ö0-9]+" required>
+
+                    <label for="second name">Efterrnamn:</label> 
+                    <input type="text" id="second name" name="second name" placeholder="Ange efternamn" pattern="[a-öA-Ö0-9]+" required>
+
+                    <label for="password">Lösenord:</label>
+                    <input type="password" id="password" name="password" placeholder="Ange lösenord" required> 
+                    <br><br>
+                    <section>
+                        <input type="checkbox" id="checkbox" name="checkbox" value="kom ihåg mig">
+                        <label for="checkbox">Kom ihåg mig</label>
+                    </section> 
+                    <br>
+                
+                    <button type="submit">Skapa konto</button> 
+                </form>
+                <form action="register.html">
+                    <button>Logga in</button> 
+                </form>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
