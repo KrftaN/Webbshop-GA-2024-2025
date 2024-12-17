@@ -27,8 +27,8 @@ h2{
   justify-content: center;
 }
   
-input[type=text], input[type=password] {
-  width: 100%; /* Full width for smaller screens */
+input[type=text], input[type=password], input[type=date] {
+  width: 100%; 
   padding: 15px 15px;
   margin: 10px 0;
   display: inline-block;
