@@ -1,0 +1,26 @@
+extends base
+
+block content  
+    //main
+    //    h2 Våra produkter
+    //    section
+    //        each product in Products
+    //            section
+    //                a(href=`/produkter/${product._id}`)
+    //                    img(src=`/src/products/${product._id}.jpg`, alt=product.name)
+    //                    a(href=`/produkter/${product._id}`)
+    //                        | #{product.name}
+    //                    a(href=`/produkter/${product._id}`)
+    //                        | #{product.price} kr
+    main
+        h2 Våra produkter
+        section
+            each product in Products
+                a(href=`/produkter/${product._id}`)
+                    article
+                        img(src=`/src/products/${product._id}.jpg`, alt=product.name)
+                        if (product.requiresFridge)
+                            img.kylVara(src="/src/assets/frys.png", alt="kylvara")
+                        p #{product.name}
+                        p #{product.price} kr
+            

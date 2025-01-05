@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Mail
+        include _style
+
+	body
+		main
+			section
+				section
+					img(src="/src/assets/k-8.png", alt="Våran logga")
+				section
+					img(src="/src/assets/mail-logga.png", alt="Kuvert")
+				section
+					h2 Email Verifiering
+					p Hejsan [namn],
+					p
+						| Du är nästan redo att ta del av Klasskassans sortiment och börja sälja för
+						| att tjäna in pengar till klasskassan
+					p
+						| Klicka på knappen nedan för att verifiera att detta är rätt mail, länken är
+						| aktiv i 24 timmar
+				form(action="#")
+					input#verifyMail(type="submit", name="knapp", value="Verifiera Mail")
+				div
+				section
+					a(href="https://www.instagram.com/klasskassanuf_2023/")
+						img(src="/src/assets/instagram.ico", alt="Instagram")
+					a(href="#")
+						img(src="/src/assets/tiktok.ico", alt="TikTok")
+					a(href="#")
+						img(src="/src/assets/x.ico", alt="X")
+				section
+					a(href="https://www.klasskassan-uf.se") klasskassan-uf.se

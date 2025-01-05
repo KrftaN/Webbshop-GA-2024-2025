@@ -1,0 +1,65 @@
+header
+	if user 
+		h1 Klasskassan
+		a#burger(href="#")
+			img(src="../src/assets/hamburger-button.png")
+		nav
+			ul
+				li
+					a#hideNav(href="#") Stäng
+				li
+					a(href="/")
+						img.logo(src="../src/assets/K-8.png", alt="Våran logga")
+				li
+					a(href="/valkommen") Kalkylator
+				li
+					a(href="/produkter") Produkter
+					ul.dropdown-produkter
+						li
+							a(href="/valkommen") Katalog
+						li
+							a(href="/valkommen") Annat
+						li
+							a(href="/valkommen") Varor
+				li
+					a(href="/om-oss") Om oss
+			ul
+				li
+					a(href="#") 
+						| #{user.name}
+					ul.dropdown-logga-in
+						li
+							a(href="/valkommen") Konto
+						li
+							button#logout-button Logga Ut
+
+	else 		
+		h1 Klasskassan
+		a#burger(href="#")
+			img(src="../src/assets/hamburger-button.png")
+		nav.nav-not-registered
+			ul
+				li
+					a#hideNav(href="#") Stäng
+				li
+					a(href="/")
+						img.logo(src="../src/assets/K-8.png", alt="Våran logga")
+				li
+					a(href="/valkommen") Kalkylator
+				li
+					a(href="/produkter") Produkter
+					ul.dropdown-produkter
+						li
+							a(href="/valkommen") Katalog
+						li
+							a(href="/valkommen") Annat
+						li
+							a(href="/valkommen") Varor
+				li
+					a(href="/om-oss") Om oss
+			ul
+				li
+					a(href="/registrera-dig") Registrera dig
+				li
+					a(href="/logga-in") Logga in
+

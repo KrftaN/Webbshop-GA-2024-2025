@@ -1,0 +1,23 @@
+extends base
+
+block content
+  main
+    form#sign-up-form(action)
+      h2 Registrera ett konto 
+      input#name(type="text", placeholder="Skriv in ditt namn", required)      
+      input#email(type="text", placeholder="Skriv in din mail", required)
+      input#password(type="password", placeholder="Skriv in ditt lösenord", required)
+      input#passwordConfirm(type="password", placeholder="Bekräfta ditt lösenord", required)
+      section
+        input(type="checkbox", name="godkänner", required)
+        label(for="godkänner") Jag godkänner 
+          a(href="#") användarvillkoren
+      p Har du redan ett konto? 
+        a#log-in(href="/logga-in") Logga in
+      input(type="submit", value="Registrera dig")
+
+
+
+
+
+

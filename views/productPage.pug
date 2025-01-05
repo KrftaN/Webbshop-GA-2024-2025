@@ -1,0 +1,35 @@
+extends base
+
+block content
+    main
+        img(src=`/src/products/${product._id}.jpg`, alt=product.name)
+        section
+            h2 
+                | #{product.name}            
+            a(href="#")
+                img(src=`/src/manufacturers/${product.formattedName}.jpg`, alt="Producent")
+            p
+                | #{product.price} kr
+            section
+                p Lorem ipsum dolardolor sit amet, consectetur adipisicing elit. Commodi, eos iste, maxime laudantium labore minima dignissimos aperiam impedit sed similique quidem eveniet omnis placeat assumenda repellat quos praesentium? Quam, voluptates.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quas doloribus vitae veniam cum, facilis aliquid atque expedita in voluptatum excepturi? Illo quas molestias minus doloribus nesciunt. Voluptatem, non harum!
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque praesentium, commodi vero iste quod tempora molestiae ducimus ullam delectus? Nam nulla eligendi maxime architecto nostrum, nemo sit dignissimos facere obcaecati.
+        section
+            details
+                summary
+                    | Detaljer
+                table
+                    tr
+                        th
+                            | Pris
+                        th
+                            | Tillverkare
+                        th
+                            | Kylvara?
+                    tr
+                        td
+                            | #{product.price} kr
+                        td
+                            | #{product.manufacturer} 
+                        td  
+                            | #{product.kylvara}

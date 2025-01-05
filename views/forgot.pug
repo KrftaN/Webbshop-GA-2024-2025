@@ -1,0 +1,10 @@
+extends base
+
+block content 
+    main
+        form#forgot-password-form(action="#" method="post")
+            a(href="/logga-in")
+                img(src="/src/assets/arrow.png", alt="Tillbaka")
+            h2 Återställ lösenord
+            input#email(type="text", placeholder="Skriv in din mail", required)
+            input(type="submit", value="Skicka Mail")
