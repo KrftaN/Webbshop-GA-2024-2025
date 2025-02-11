@@ -27,7 +27,7 @@ h2{
   justify-content: center;
 }
   
-input[type=text], input[type=password], input[type=date] {
+input[type=text], input[type=password], input[type=date], input[type=email] {
   width: 100%; 
   padding: 15px 15px;
   margin: 10px 0;
@@ -83,7 +83,7 @@ button:hover {
     margin: 0 auto;
   }
   
-  input[type=text], input[type=password] {
+  input[type=text], input[type=password], input[type=email] {
     padding: 12px 20px; /* Larger inputs for desktop */
     font-size: 16px; /* Increase font size for readability */
   }
