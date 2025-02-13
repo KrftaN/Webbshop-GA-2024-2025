@@ -54,6 +54,12 @@ section{
   align-items: center;
 }
 
+section > a{
+  text-decoration: none;
+  font-size: 22px;
+  margin-left: auto;
+}
+
 button{
   background-color: #d8d7d7;
   color: rgb(58, 58, 58);
