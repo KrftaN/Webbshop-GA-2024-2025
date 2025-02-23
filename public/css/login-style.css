@@ -18,6 +18,11 @@ h2{
   text-align: center;
 }
 
+h3{
+  font-size: 22px;
+  font-weight: 100;
+}
+
 .form {
   border: 2px solid #f1f1f1;
   padding: 10px; 
@@ -44,8 +49,16 @@ label{
 input[type=checkbox]{
   width: 28px;
   height: 28px;
-  margin-top: 0;
 }
+
+.checkbox-group input[type="checkbox"], label {
+  vertical-align: middle; /* Centrera checkboxen och labeln vertikalt */
+  margin-right: 10px;
+  width: 80px;  /* Anpassad bredd */
+  height: 80px; /* Anpassad höjd */
+}
+
+
 
 section{
   display: flex;
@@ -55,7 +68,8 @@ section{
 }
 
 section > a{
-  text-decoration: none;
+  text-decoration:underline;
+  color: black;
   font-size: 22px;
   margin-left: auto;
 }
@@ -92,6 +106,11 @@ button:hover {
   input[type=text], input[type=password], input[type=email] {
     padding: 12px 20px; /* Larger inputs for desktop */
     font-size: 16px; /* Increase font size for readability */
+  }
+
+  .checkbox-group input[type="checkbox"], label {
+    width: 30px;  /* Anpassad bredd */
+    height: 30px; /* Anpassad höjd */
   }
   
   button {
