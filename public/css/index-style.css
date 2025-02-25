@@ -1,6 +1,7 @@
 main {
     display: flex; 
     flex-direction: column;
+    align-items: center;
     gap: 30px;
 }
 
@@ -16,6 +17,12 @@ main > section:nth-child(2) p {
 }
 
 main > section:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section:nth-child(3) > section {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -117,6 +124,83 @@ main > section:nth-child(5) article p {
 
 main > section:nth-child(5) article > section{
     background-image: url("https://hips.hearstapps.com/hmg-prod/images/sopranos-mini-package-ledes-capricola-1547076318.jpg");
-    background-position: right;
-    height: 60px;
+    background-position: center;
+    height: 70px;
+}
+
+@media screen and (min-width: 500px) {
+    main > section:nth-child(2) {
+        width: 70%;
+    }
+
+    main > section:nth-child(3) {
+        width: 70%;
+    }
+
+    main > section:nth-child(4) article {
+        width: 70%;
+    }
+
+    main > section:nth-child(5) {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:800px) {
+    main > section:nth-child(3) {
+        width: 90%;
+    }
+    
+    main > section:nth-child(3) section {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+
+    main > section:nth-child(3) article {
+        width: 300px;
+    }
+
+    main > section:nth-child(4) article {
+        flex-direction: row;
+        width: 85%;
+    }
+
+    main > section:nth-child(4) article img {
+        width: 40%;
+    }
+
+    main > section:nth-child(4) article section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: right;
+    }
+
+    main > section:nth-child(4) article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    
+    main > section:nth-child(4) article:nth-child(even) section{
+        text-align: left;
+    }
+
+    main > section:nth-child(5) {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    main {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
 }

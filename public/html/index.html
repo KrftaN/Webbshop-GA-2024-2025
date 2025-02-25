@@ -7,26 +7,27 @@
         <link rel="icon" href="../src/assets/logga.png">
         <link href="../css/index-style.css" rel="stylesheet">
         <link href="../css/nav-style.css" rel="stylesheet">
+        <script src="../scripts/script.js" defer></script>
     </head>
     <body>
-        <header>    
+        <header>
             <nav> <!--Grunden för en nav-->
                 <ul> 
-                    <li>
-                        <a href="index.html"></a>
-                    </li>
-                    <li> 
-                        <a href=""></a> 
-                    </li>
-                    <li>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <a href=""></a>
-                    </li>
+                    <li><a href="index.html"><img src="../src/assets/logga.png" alt="Logotyp"></a></li>
+                    <li class="search"><form action="#"><input type="text" placeholder="Sök efter produkt"></form></li>
+                    <li><a href="#"><img src="../src/assets/logga.png" alt="Användare"></a><p>Logga in/bli medlem</p></li>
+                    <li><a href="about-us.html">Om Oss</a></li>
+                    <li><a href="#"><img src="../src/assets/logga.png" alt="Kundvagn"></a></li>
+                    <li><a id="show-navigation" href="#"><img src="../src/assets/logga.png" alt="Visa navigation"></a></li>                    
+                </ul>
+                <ul id="navigation">
+                    <li><a id="hide-navigation" href="#"><img src="../src/assets/logga.png" alt="Stäng nav"></a></li>
+                    <li class="search"><form action="#"><input type="text" placeholder="Sök efter produkt"></form></li>
+                    <li><a href="#">Kategori 1</a></li>
+                    <li><a href="#">Kategori 2</a></li>
+                    <li><a href="#">Kategori 3</a></li>
+                    <li><a href="#">Kategori 4</a></li>
+                    <li><a href="#">Kategori 5</a></li>
                 </ul>
             </nav>
         </header>
@@ -39,58 +40,64 @@
 
             <section>
                 <h2>Populära produkter</h2>
-                <article>
-                    <img src="../src/assets/logga.png" alt="produkter">
-                    <p>Chark > gris > kind > gabagool</p>
-                    <h3>Gabagool</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
-                    <p>80 kr/hg</p>
-                </article>
-                
-                <article>
-                    <img src="../src/assets/logga.png" alt="produkter">
-                    <p>Chark > gris > kind > gabagool</p>
-                    <h3>Gabagool</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
-                    <p>80 kr/hg</p>
-                </article>
-
-                <article>
-                    <img src="../src/assets/logga.png" alt="produkter">
-                    <p>Chark > gris > kind > gabagool</p>
-                    <h3>Gabagool</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
-                    <p>80 kr/hg</p>
-                </article>
-
-                <article>
-                    <img src="../src/assets/logga.png" alt="produkter">
-                    <p>Chark > gris > kind > gabagool</p>
-                    <h3>Gabagool</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
-                    <p>80 kr/hg</p>
-                </article>
-
-                <article>
-                    <img src="../src/assets/logga.png" alt="produkter">
-                    <p>Chark > gris > kind > gabagool</p>
-                    <h3>Gabagool</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
-                    <p>80 kr/hg</p>
-                </article>
+                <section>
+                    <article>
+                        <img src="../src/assets/logga.png" alt="produkter">
+                        <p>Chark > gris > kind > gabagool</p>
+                        <h3>Gabagool</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
+                        <p>80 kr/hg</p>
+                    </article>
+                    
+                    <article>
+                        <img src="../src/assets/logga.png" alt="produkter">
+                        <p>Chark > gris > kind > gabagool</p>
+                        <h3>Gabagool</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
+                        <p>80 kr/hg</p>
+                    </article>
+    
+                    <article>
+                        <img src="../src/assets/logga.png" alt="produkter">
+                        <p>Chark > gris > kind > gabagool</p>
+                        <h3>Gabagool</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
+                        <p>80 kr/hg</p>
+                    </article>
+    
+                    <article>
+                        <img src="../src/assets/logga.png" alt="produkter">
+                        <p>Chark > gris > kind > gabagool</p>
+                        <h3>Gabagool</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
+                        <p>80 kr/hg</p>
+                    </article>
+    
+                    <article>
+                        <img src="../src/assets/logga.png" alt="produkter">
+                        <p>Chark > gris > kind > gabagool</p>
+                        <h3>Gabagool</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi placeat dignissimos repellat debitis reprehenderit. Fuga rem, repellendus voluptate vitae commodi illo provident eius! Ex, officiis placeat voluptatibus nulla at consequatur?</p>
+                        <p>80 kr/hg</p>
+                    </article>
+                </section>
             </section>
 
             <section>
                 <article>
                     <img src="../src/assets/logga.png" alt="Bild">
-                    <h3>Titel 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam excepturi magni, facere laudantium, vitae labore enim temporibus blanditiis ipsa error ab magnam. Eius corporis, architecto hic animi nemo praesentium?</p>
+                    <section>
+                        <h3>Titel 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam excepturi magni, facere laudantium, vitae labore enim temporibus blanditiis ipsa error ab magnam. Eius corporis, architecto hic animi nemo praesentium?</p>
+                    </section>
                 </article>
 
                 <article>
                     <img src="../src/assets/logga.png" alt="Bild">
-                    <h3>Titel 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam excepturi magni, facere laudantium, vitae labore enim temporibus blanditiis ipsa error ab magnam. Eius corporis, architecto hic animi nemo praesentium?</p>
+                    <section>
+                        <h3>Titel 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quisquam excepturi magni, facere laudantium, vitae labore enim temporibus blanditiis ipsa error ab magnam. Eius corporis, architecto hic animi nemo praesentium?</p>
+                    </section>
                 </article>
             </section>
 
