@@ -46,16 +46,17 @@ label{
   font-size: 22px;
 }
 
-input[type=checkbox]{
+input[type=radio]{
   width: 28px;
   height: 28px;
 }
 
-.checkbox-group input[type="checkbox"], label {
-  vertical-align: middle; /* Centrera checkboxen och labeln vertikalt */
+.radiobox-group input[type="radio"], label {
+  vertical-align: middle; /* Centrera radion och labeln vertikalt */
   margin-right: 10px;
-  width: 80px;  /* Anpassad bredd */
-  height: 80px; /* Anpassad höjd */
+  margin-bottom: 10px;
+  width: 40px;  /* Anpassad bredd */
+  height: 40px; /* Anpassad höjd */
 }
 
 
@@ -108,7 +109,7 @@ button:hover {
     font-size: 16px; /* Increase font size for readability */
   }
 
-  .checkbox-group input[type="checkbox"], label {
+  .radiobox-group input[type="radio"], label {
     width: 30px;  /* Anpassad bredd */
     height: 30px; /* Anpassad höjd */
   }

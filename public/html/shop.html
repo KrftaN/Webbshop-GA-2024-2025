@@ -5,8 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Butik</title>
     <link href="../css/nav-style.css" rel="stylesheet">
+    <link href="../css/shop.css" rel="stylesheet">
+</head>
+
 </head>
 <body>
+<div class="sidebar">
+    <div class="filter-section">
+        <h3>Kategori</h3>
+        <label><input type="checkbox"> Kat 1</label><br>
+        <label><input type="checkbox" checked> Kat 2</label><br>
+        <label><input type="checkbox"> Kat 3</label><br>
+        <label><input type="checkbox"> Kat 4</label>
+    </div>
+    <div class="filter-section">
+        <h3>Pris</h3>
+        <input type="range" min="100" max="350" value="225">
+        <div>100kr - 350kr</div>
+    </div>
+    <div class="filter-section">
+        <h3>Producent</h3>
+        <label><input type="checkbox"> Pro 1</label><br>
+        <label><input type="checkbox" checked> Pro 2</label><br>
+        <label><input type="checkbox"> Pro 3</label><br>
+        <label><input type="checkbox"> Pro 4</label>
+    </div>
+</div>
+
+<div class="content">
+    <div class="product-featured">
+        <div class="info">
+            <h1>Populär produkt</h1>
+            <h2>Produktnamn</h2>
+            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu.</p>
+            <button>Lägg till i varukorgen 🛒</button>
+        </div>
+        <img src="https://via.placeholder.com/300" alt="Produktbild">
+    </div>
+
+    <div class="product-list">
+        <div class="sort">
+            Sortera
+            <select>
+                <option>Pris</option>
+                <option>Popularitet</option>
+            </select>
+        </div>
+        <h2>Sortiment</h2>
+        <div class="product-listing">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Produktbild">
+                <h3>Produktnamn</h3>
+                <p>Pris</p>
+                <p>Lorem ipsum dolor sit amet et delectus</p>
+                <button>Lägg till i varukorgen 🛒</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Produktbild">
+                <h3>Produktnamn</h3>
+                <p>Pris</p>
+                <p>Lorem ipsum dolor sit amet et delectus</p>
+                <button>Lägg till i varukorgen 🛒</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Produktbild">
+                <h3>Produktnamn</h3>
+                <p>Pris</p>
+                <p>Lorem ipsum dolor sit amet et delectus</p>
+                <button>Lägg till i varukorgen 🛒</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Produktbild">
+                <h3>Produktnamn</h3>
+                <p>Pris</p>
+                <p>Lorem ipsum dolor sit amet et delectus</p>
+                <button>Lägg till i varukorgen 🛒</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
     
 </body>
 </html>
