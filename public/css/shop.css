@@ -5,8 +5,9 @@ body {
     display: flex;
     }
 .sidebar {
-    width: 250px;
-    padding: 20px;
+    width: 100px;
+    padding-left: 7px;
+    padding-right: 7px;
     border-right: 1px solid #ccc;
 }
 .content {
@@ -14,27 +15,32 @@ body {
     padding: 20px;
 }
 .filter-section h3 {
-    margin-top: 0;
+    margin-bottom: 0;
 }
+
+input[type=range]{
+    width: 100%;
+}
+
 .product-featured, .product-listing {
     margin-bottom: 40px;
 }
 .product-featured img, .product-card img {
-    width: 100%;
     height: auto;
     background-color: #ddd;
+    width: 70%;
 }
 .product-featured {
     display: flex;
     gap: 20px;
 }
 .product-featured .info {
-    flex: 1;
+    width: 30%;
 }
 .product-listing {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 49%));
+    gap: 2%;
 }
 .product-card {
     border: 1px solid #ccc;
