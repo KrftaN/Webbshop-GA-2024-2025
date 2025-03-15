@@ -1,0 +1,137 @@
+img { /*!!!*/
+    border: 1px solid black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+main article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-style: solid;
+    border-color: #000;
+    border-width: 1px;
+}
+
+main article p {
+    margin: 10px;
+    font-size: 1.1em;
+}
+
+main article > img {
+    width: 70%;
+}
+
+main article section {
+    width: 90%;
+}
+
+main article form fieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-style: none;
+}
+
+main article form fieldset button {
+    width: 40px;
+    padding: 8px;
+}
+
+main article form fieldset p {
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px;
+    padding: 8px;
+    width: 30px;
+    text-align: center;
+}
+
+main article form > button {
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+main article ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main article ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+main article ul li img {
+    width: 20px;
+}
+
+main article ul li p {
+    margin: 0;
+}
+
+main article ul li a {
+    color: inherit;
+}
+
+main section:last-child h3 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+main > section:last-child p{
+    font-size: 1.1em;
+    text-align: center;
+}
+
+@media screen and (min-width:700px) {
+    main article {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 40px;
+    }
+
+    main article img {
+        width: 40%;
+    }
+
+    main article section {
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        width: 1000px;
+    }
+
+    main article {
+        justify-content: center;
+        gap: 60px;
+    }
+
+    main article img {
+        width: 35%;
+    }
+
+    main article section {
+        width: 300px;
+    }
+}
