@@ -1,11 +1,11 @@
 const { catchAsync } = require("../../utils/catchAsync");
 const Product = require("../../models/productModel");
-const AppError = require("../../utils/appError");
+/* const AppError = require("../../utils/appError");
 const { formatManufacturerName } = require("../../utils/formatManufacturerName");
-const { downloadImage } = require("../../utils/downloadImage");
+const { downloadImage } = require("../../utils/downloadImage"); */
 
 exports.createProduct = catchAsync(async (req, res, next) => {
-	const { name, description, manufacturer, manufacturerLink, price, requiresFridge } = req.body;
+	const { name, description, manufacturer, manufacturerLink, price, requiresFridge, image } = req.body;
 
 	console.log(req.body);
 
@@ -16,6 +16,7 @@ exports.createProduct = catchAsync(async (req, res, next) => {
 		manufacturerLink,
 		price,
 		requiresFridge,
+		image
 	});
 
 	res.status(201).json({

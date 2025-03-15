@@ -2,7 +2,6 @@
 
 const path = require("path");
 const express = require("express");
-const app = express();
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
@@ -18,7 +17,7 @@ const viewRouter = require("./routes/viewRoutes");
 const adminRouter = require("./routes/adminRoutes");
 const productRouter = require("./routes/productRoutes");
 const globalErrorHandler = require("./controllers/errorController");
-const { validateImages } = require("./utils/validateImages");
+/* const { validateImages } = require("./utils/validateImages");*/
 const { getError } = require("./controllers/viewsController");
 // Rate limiter för att förhindra missbruk från en enda IP-adress
 const limiter = rateLimit({
@@ -28,10 +27,11 @@ const limiter = rateLimit({
 	skip: (req) => req.headers["x-forwarded-for"] === undefined,
 });
 
-validateImages(); //Tar bort alla bilder som inte används till produkterna, och laddar ned alla bilder
+//validateImages(); //Tar bort alla bilder som inte används till produkterna, och laddar ned alla bilder
 
 //app.enable("trust proxy");
 
+const app = express();
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
@@ -43,7 +43,6 @@ app.use(cors());
 // }))
 
 app.options("*", cors());
-// app.options('/api/v1/tours/:id', cors());
 
 // Servera statiska filer från den offentliga katalogen
 app.use(express.static(path.join(__dirname, "public")));

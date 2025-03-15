@@ -12,7 +12,7 @@ const productSchema = new mongoose.Schema({
 	},
 	manufacturerLink: {
 		type: String,
-		required: [true, "Ogiltig länk till producent!"],
+		required: [false, "Ogiltig länk till producent!"],
 	},
 	manufacturerImage: {
 		type: String,
@@ -24,11 +24,11 @@ const productSchema = new mongoose.Schema({
 	},
 	requiresFridge: {
 		type: Boolean,
-		required: [true, "Du måste inkludera om produkten är en kylvara"],
+		required: [false, "Du måste inkludera om produkten är en kylvara"],
 	},
 	image: {
 		type: String,
-		required: [false, "Du måste inkludera en bild till produkten!"],
+		required: [true, "Du måste inkludera en bild till produkten!"],
 	},
 });
 
