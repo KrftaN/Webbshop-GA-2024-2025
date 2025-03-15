@@ -1,17 +1,39 @@
-h1{
+.wrapper{
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  height: 98vh;
+}
+
+main{
+  display: grid;
+  grid-area: main;
+}
+
+h2{
+  font-size:50px;
   text-align: center;
+}
+
+h3{
+  font-size: 22px;
+  font-weight: 100;
 }
 
 .form {
   border: 2px solid #f1f1f1;
-  padding: 10px; /* Optimized for mobile spacing */
-  min-height: 80vh;
+  padding: 10px; 
+  height: auto;
   display: flex;
-  flex-direction: column; /* Align items vertically */
+  flex-direction: column; 
+  justify-content: center;
 }
   
-input[type=text], input[type=password] {
-  width: 100%; /* Full width for smaller screens */
+input[type=text], input[type=password], input[type=date], input[type=email] {
+  width: 100%; 
   padding: 15px 15px;
   margin: 10px 0;
   display: inline-block;
@@ -24,17 +46,33 @@ label{
   font-size: 22px;
 }
 
-input[type=checkbox]{
+input[type=radio]{
   width: 28px;
   height: 28px;
-  margin-top: 0;
 }
+
+.radiobox-group input[type="radio"], label {
+  vertical-align: middle; /* Centrera radion och labeln vertikalt */
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 40px;  /* Anpassad bredd */
+  height: 40px; /* Anpassad höjd */
+}
+
+
 
 section{
   display: flex;
   height: 28px;
   flex-direction: row;
   align-items: center;
+}
+
+section > a{
+  text-decoration:underline;
+  color: black;
+  font-size: 22px;
+  margin-left: auto;
 }
 
 button{
@@ -66,9 +104,14 @@ button:hover {
     margin: 0 auto;
   }
   
-  input[type=text], input[type=password] {
+  input[type=text], input[type=password], input[type=email] {
     padding: 12px 20px; /* Larger inputs for desktop */
     font-size: 16px; /* Increase font size for readability */
+  }
+
+  .radiobox-group input[type="radio"], label {
+    width: 30px;  /* Anpassad bredd */
+    height: 30px; /* Anpassad höjd */
   }
   
   button {
