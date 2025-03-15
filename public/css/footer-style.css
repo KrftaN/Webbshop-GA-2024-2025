@@ -1,0 +1,109 @@
+footer {
+    border-top-style: solid;
+    border-color: #000;
+    border-width: 1px;
+    display: grid;
+}
+
+footer h2 {
+    text-align: center;
+}
+
+footer>section:first-child {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-area: logo;
+}
+
+footer>section:first-child img {
+    width: 20vw;
+}
+
+footer>section:nth-child(2) {
+    grid-area: columns;
+}
+
+footer>section:nth-child(2), footer>section:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer>section:nth-child(2)>section {
+    padding: 10px;
+}
+
+footer ul {
+    padding-inline-start: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+footer ul li a {
+    color: inherit;
+    font-size: 1.2em;
+}
+
+footer>section:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    grid-area: medias;
+}
+
+footer>section:nth-child(3) img {
+    width: 15vw;
+}
+
+footer>section:last-child {
+    padding: 10px;
+    grid-area: copyright;
+}
+
+@media screen and (min-width: 700px) {
+    footer {
+        grid-template-areas: 
+            "logo columns"
+            "medias ..."
+            "copyright copyright";
+        width: 70%;
+        margin: auto;
+    }
+
+    footer>section:first-child img{
+        width: 10vw;
+    }
+
+    footer>section:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        padding: 20px;
+        gap: 80px;
+    }
+
+    footer>section:nth-child(2) section ul{
+        gap: 15px;
+    }
+
+    footer>section:nth-child(3) img {
+        width: 50px;
+    }
+
+    footer>section:last-child {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+    }
+}

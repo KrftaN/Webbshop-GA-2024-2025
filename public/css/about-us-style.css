@@ -1,0 +1,107 @@
+h2, h3, h4 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+main section:first-of-type {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1em;
+    gap: 20px;
+}
+
+main section:first-of-type img {
+    width: 90%;
+    border: solid black 1px;
+}
+
+main section:first-of-type article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+main section:last-child {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+main section:last-child article {
+    background-color: #f3f3f3;
+    box-shadow: 3px 2px 20px #bfbfbf;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+main section:last-child article img {
+    width: 70%;
+    border: solid black 1px;
+}
+
+h4, p {
+    margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+    main section:first-of-type img {
+        width: 70%;
+    }
+
+    main section:last-child article img {
+        width: 40%;
+    }
+
+    main section:last-child article {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    main section:last-child article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main section:first-of-type img {
+        width: 40%;
+    }
+
+    main section:last-child article img {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main section:first-of-type {
+        width: 60%;
+    }
+
+    main section:first-of-type img {
+        width: 30%;
+    }
+
+    main section:last-child {
+        width: 60%;
+    }
+}
