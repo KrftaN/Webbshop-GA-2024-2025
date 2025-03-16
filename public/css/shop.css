@@ -4,8 +4,10 @@ body {
     padding: 0;
 }
 .mobile-filter{
-    font-size: 40px;
+    font-size: 35px;
+    margin-left: 10px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 .mobile-product{
     text-align: center;
@@ -19,9 +21,14 @@ body {
     flex-direction: row;
 }
 .sort{
-    text-align: right;
-    font-size: 40px;
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 35px;
     border-radius: 10px;
+    margin-bottom: 10px;
+}
+.sort > select{
+    font-size: 5vw;
 }
 .sort2{
     display:none;
@@ -38,6 +45,8 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 2px 20px #bfbfbf;
 }
 .product-card button, .product-featured button {
     margin-top: 10px;
@@ -45,6 +54,7 @@ body {
     background-color: #ddd;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 .sidebar{
     display:none;
@@ -80,8 +90,14 @@ body {
         display: none;
     }
 
-    .product-featured, .product-listing {
+    .product-featured {
         margin-bottom: 40px;
+        box-shadow: 3px 2px 20px #bfbfbf;
+        border-radius: 10px;
+    }
+    .product-listing{
+        margin-bottom: 40px;
+        border-radius: 10px;
     }
     .product-featured img, .product-card img {
         height: auto;
@@ -94,6 +110,9 @@ body {
     }
     .product-featured .info {
         width: 30%;
+        margin-left: 6px;
+        margin-bottom: 6px;
+        border-radius: 10px;
     }
     .product-listing {
         display: grid;
@@ -102,6 +121,8 @@ body {
     }
     .product-card {
         border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 3px 2px 20px #bfbfbf;
         padding: 10px;
         text-align: center;
     }
@@ -111,8 +132,13 @@ body {
         background-color: #ddd;
         border: none;
         cursor: pointer;
+        border-radius: 10px;    
+    }
+    .sort{
+        display: none;
     }
     .sort2 {
+        display:block;
         text-align: right;
         border-radius: 10px;
         font-size: 20px;
