@@ -13,14 +13,18 @@ main{
   grid-area: main;
 }
 
-h2{
+main h2{
   font-size:50px;
   text-align: center;
 }
 
-h3{
+main h3{
   font-size: 22px;
   font-weight: 100;
+}
+
+main a{
+  display: block;
 }
 
 .form {
@@ -50,16 +54,6 @@ input[type=radio]{
   width: 28px;
   height: 28px;
 }
-
-.radiobox-group input[type="radio"], label {
-  vertical-align: middle; /* Centrera radion och labeln vertikalt */
-  margin-right: 10px;
-  margin-bottom: 10px;
-  width: 40px;  /* Anpassad bredd */
-  height: 40px; /* Anpassad höjd */
-}
-
-
 
 main section{
   display: flex;
@@ -107,11 +101,6 @@ button:hover {
   input[type=text], input[type=password], input[type=email] {
     padding: 12px 20px; /* Larger inputs for desktop */
     font-size: 16px; /* Increase font size for readability */
-  }
-
-  .radiobox-group input[type="radio"], label {
-    width: 30px;  /* Anpassad bredd */
-    height: 30px; /* Anpassad höjd */
   }
   
   button {

@@ -6,14 +6,32 @@
     <title>Logga in</title>
     <link href="../css/nav-style.css" rel="stylesheet">
     <link href="../css/login-style.css" rel="stylesheet">
+    <link href="../css/footer-style.css" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
         <header>
-            
+            <nav> 
+                <ul> 
+                    <li><a href="index.html"><img src="../src/assets/logga.png" alt="Logotyp"></a></li>
+                    <li class="search"><form action="#"><input type="text" placeholder="Sök efter produkt"></form></li>
+                    <li><a href="#"><img src="../src/assets/logga.png" alt="Användare"></a><p>Logga in/bli medlem</p></li>
+                    <li><a href="about-us.html">Om Oss</a></li>
+                    <li><a href="#"><img src="../src/assets/logga.png" alt="Kundvagn"></a></li>
+                    <li><a id="show-navigation" href="#"><img src="../src/assets/logga.png" alt="Visa navigation"></a></li>                    
+                </ul>
+                <ul id="navigation">
+                    <li><a id="hide-navigation" href="#"><img src="../src/assets/logga.png" alt="Stäng nav"></a></li>
+                    <li class="search"><form action="#"><input type="text" placeholder="Sök efter produkt"></form></li>
+                    <li><a href="#">Kategori 1</a></li>
+                    <li><a href="#">Kategori 2</a></li>
+                    <li><a href="#">Kategori 3</a></li>
+                    <li><a href="#">Kategori 4</a></li>
+                    <li><a href="#">Kategori 5</a></li>
+                </ul>
+            </nav>
         </header>
         <main> 
-            
             <div class="form">
                 <form action="index.html" method="post"> <!--Här är mitt formulär, här har jag en action vilket är vart man hamnar efter man tryckt på submit, använder metod post vilket skickar informationen genom bodyn separat medans get (den andra metoden) skickar det genom URL:en-->
                     <h2>Logga in</h2>
@@ -32,11 +50,51 @@
                 
                     <button type="submit">Logga in</button> <!--En knapp för att skicka in användarens inmatning och skicka användaren till action sidan-->
                 </form>
-                <form action="register.html">
-                    <button>Skapa konto</button> <!--En knapp-->
-                </form>
+                <a href="register.html">
+                    <button>Registrera</button>
+                </a>
             </div>
         </main>
+        <footer>
+            <section>
+                <h2>Webbshoppen</h2>
+                <img src="../src/assets/logga.png" alt="Logotyp">
+            </section>
+
+            <section>
+                <section>
+                    <h3>Kolumn</h3>
+                    <ul>
+                        <li><a href="#">Länk 1</a></li>
+                        <li><a href="#">Länk 1</a></li>
+                        <li><a href="#">Länk 1</a></li>
+                        <li><a href="#">Länk 1</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Kolumn</h3>
+                    <ul>
+                        <li><a href="#">Länk 1</a></li>
+                        <li><a href="#">Länk 1</a></li>
+                        <li><a href="#">Länk 1</a></li>
+                        <li><a href="#">Länk 1</a></li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <img src="../src/assets/logga.png" alt="Länk">
+                <img src="../src/assets/logga.png" alt="Länk">
+                <img src="../src/assets/logga.png" alt="Länk">
+            </section>
+
+            <section>
+                <p>© 2024 Webbshop. All rights reserved.</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+            </section>
+        </footer>
     </div>
 </body>
 </html>
