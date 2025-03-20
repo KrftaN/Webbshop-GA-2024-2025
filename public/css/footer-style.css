@@ -3,6 +3,11 @@ footer {
     border-color: #000;
     border-width: 1px;
     display: grid;
+    grid-template-areas: 
+    "logo"
+    "columns"
+    "medias"
+    "copyright";
 }
 
 footer h2 {
