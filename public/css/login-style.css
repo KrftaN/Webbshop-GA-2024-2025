@@ -61,14 +61,14 @@ input[type=radio]{
 
 
 
-section{
+main section{
   display: flex;
   height: 28px;
   flex-direction: row;
   align-items: center;
 }
 
-section > a{
+main section > a{
   text-decoration:underline;
   color: black;
   font-size: 22px;
