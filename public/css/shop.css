@@ -1,4 +1,4 @@
-body {
+main {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -33,6 +33,9 @@ body {
 .sort2{
     display:none;
 }
+.content{
+    margin-bottom: 100px;
+}
 .product-featured{
     display: none;
 }
@@ -61,7 +64,7 @@ body {
 }
 
 @media screen and (min-width: 600px){
-    body{
+    main{
         display: flex;
     }
     .mobile-product{
