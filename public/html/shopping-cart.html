@@ -1,12 +1,152 @@
 <!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kundvagn</title>
-    <link href="../css/nav-style.css" rel="stylesheet">
-</head>
-<body>
-    
-</body>
+
+<html lang="en">
+    <head>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Kundvagn</title>
+            <link rel="icon" href="../src/assets/logga.png">
+            <link href="../css/shopping-cart-style.css" rel="stylesheet">
+            <script src="../scripts/script.js" defer></script>
+        </head>
+    </head>
+
+    <body>
+        <main>
+            <h2>Din varukorg</h2>
+
+            <section>
+                <article>
+                    <section>
+                        <img src="../src/assets/logga.png" alt="Produkt">
+                        <section>
+                            <h3>Produktnamn</h3>
+                            <p>Prdoucentnamn</p>
+                            <a href="#">Ta bort X</a>
+                        </section>
+                    </section>
+                    <section>
+                        <form action="#">
+                            <fieldset>
+                                <button id="button-decrease">-</button>
+                                <p id="amount-counter">1</p>
+                                <button id="button-increase">+</button>
+                            </fieldset>
+                            <p>100kr/hg</p>
+                        </form>
+                    </section>
+                    <p>200 kr</p>
+                </article>
+
+                <article>
+                    <section>
+                        <img src="../src/assets/logga.png" alt="Produkt">
+                        <section>
+                            <h3>Produktnamn</h3>
+                            <p>Prdoucentnamn</p>
+                            <a href="#">Ta bort X</a>
+                        </section>
+                    </section>
+                    <section>
+                        <form action="#">
+                            <fieldset>
+                                <button id="button-decrease">-</button>
+                                <p id="amount-counter">1</p>
+                                <button id="button-increase">+</button>
+                            </fieldset>
+                            <p>100kr/hg</p>
+                        </form>
+                    </section>
+                    <p>200 kr</p>
+                </article>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Prudokt</th>
+                            <th scope="col">Pris</th>
+                            <th scope="col">Kvantitet</th>
+                            <th scope="col">Summa</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <img src="../src/assets/logga.png" alt="Produkt">
+                                <section>
+                                    <h3>Produktnamn</h3>
+                                    <p>Prdoucentnamn</p>
+                                    <a href="#">Ta bort X</a>
+                                </section>
+                            </th>
+                            <td>100kr/hg</td>
+                            <td>                        
+                                <form action="#">
+                                    <fieldset>
+                                        <button id="button-decrease">-</button>
+                                        <p id="amount-counter">1</p>
+                                        <button id="button-increase">+</button>
+                                    </fieldset>
+                                </form>
+                            </td>
+                            <td>200kr</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <form action="#">
+                <fieldset>
+                    <legend>Fraktmetod</legend>
+                    <input type="radio" id="postombud" name="postombud" value="postombud1" checked>
+                    <label for="postombud"><img src="../src/assets/logga.png" alt="Postombud"> Postombud - 69 kr</label>
+                    <div class="line"></div>
+                    <input type="radio" id="postombud" name="postombud" value="postombud2">
+                    <label for="postombud"><img src="../src/assets/logga.png" alt="Postombud"> Postombud - 69 kr</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Betalningsmetod</legend>
+                    <input type="radio" id="betalningsmetod" name="betalningsmetod" value="betalningsmetod1" checked>
+                    <label for="postombud"><img src="../src/assets/logga.png" alt="Postombud"> Betalningsmetod - 69 kr</label>
+                    <div class="line"></div>
+                    <input type="radio" id="betalningsmetod" name="betalningsmetod" value="betalningsmetod2">
+                    <label for="postombud"><img src="../src/assets/logga.png" alt="Postombud"> Betalningsmetod - 69 kr</label>
+                </fieldset>
+            </form>
+
+            <section>
+                <h3>Summering</h3>
+                <section>
+                    <p>Frakt: </p>
+                    <p>99 kr</p>
+
+                    <p>Totalt: </p>
+                    <p>449 kr</p>
+                </section>
+                <button>Frakt</button>
+            </section>
+
+            <form action="#">
+                <legend>Fraktinformation</legend>
+
+                <section>
+                    <input type="text" name="firstName" id="firstName" placeholder="Förnamn*" required>
+                    <input type="text" name="lastName" id="lastName" placeholder="Efternamn*" required>
+                    <input type="text" name="companyName" id="companyName" placeholder="Företagsnamn">
+                    <input type="email" name="email" id="email" placeholder="E-post*" required>
+                    <input type="text" name="adress" id="adress" placeholder="Adress*" required>
+                    <input type="number" name="zip" id="zip" placeholder="Postnummer*" required>
+                    <input type="text" name="ort" id="ort" placeholder="Ort*" required>
+                    <input type="tel" name="telephone" id="telephone" placeholder="Telefonnummer*" required>
+                </section>
+
+                <p>Att betala: 449 kr</p>
+
+                <button type="submit">Betala</button>
+            </form>
+        </main>
+    </body>
 </html>

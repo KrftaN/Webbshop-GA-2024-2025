@@ -5,8 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrera</title>
     <link href="../css/nav-style.css" rel="stylesheet">
+    <link href="../css/login-style.css" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <header>
+            
+        </header>
+        <main> 
+            <div class="form">
+                <form action="index.html" method="post"> 
+                    <h2>Skapa konto</h2>
+                    <label for="first_name">Förnamn:</label> 
+                    <input type="text" id="first_name" name="first_name" placeholder="Ange förnamn" pattern="[a-öA-Ö0-9]+" required>
+
+                    <label for="second_name">Efterrnamn:</label> 
+                    <input type="text" id="second_name" name="second_name" placeholder="Ange efternamn" pattern="[a-öA-Ö0-9]+" required>
+ 
+                    <label for="birthday">Födelsedag:</label>
+                    <input type="date" id="birthday" name="birthday">
+
+                    <label for="password">Lösenord:</label>
+                    <input type="password" id="password" name="password" placeholder="Ange lösenord" required> 
+                    <input type="password" placeholder="Repetera lösernord" id="confirm_password" required>
+
+                    <h3>Kön</h3>
+                    <div class="radiobox-group">
+                        <input type="radio" id="kvinna" name="radio" value="alternativ1">
+                        <label for="kvinna">Kvinna</label><br>
+                    
+                        <input type="radio" id="man" name="radio" value="alternativ2">
+                        <label for="man">Man</label><br>
+                    
+                        <input type="radio" id="annat" name="radio" value="alternativ">
+                        <label for="annat">Annat</label>
+                    </div>
+                    <br>
+
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required><br>
+                    <br>
+                
+                    <button type="submit">Skapa konto</button> 
+                </form>
+                <form action="register.html">
+                    <button>Logga in</button> 
+                </form>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

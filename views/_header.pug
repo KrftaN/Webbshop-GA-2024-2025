@@ -1,65 +1,39 @@
 header
-	if user 
-		h1 Klasskassan
-		a#burger(href="#")
-			img(src="../src/assets/hamburger-button.png")
-		nav
-			ul
-				li
-					a#hideNav(href="#") Stäng
-				li
-					a(href="/")
-						img.logo(src="../src/assets/K-8.png", alt="Våran logga")
-				li
-					a(href="/valkommen") Kalkylator
-				li
-					a(href="/produkter") Produkter
-					ul.dropdown-produkter
-						li
-							a(href="/valkommen") Katalog
-						li
-							a(href="/valkommen") Annat
-						li
-							a(href="/valkommen") Varor
-				li
-					a(href="/om-oss") Om oss
-			ul
-				li
-					a(href="#") 
-						| #{user.name}
-					ul.dropdown-logga-in
-						li
-							a(href="/valkommen") Konto
-						li
-							button#logout-button Logga Ut
-
-	else 		
-		h1 Klasskassan
-		a#burger(href="#")
-			img(src="../src/assets/hamburger-button.png")
-		nav.nav-not-registered
-			ul
-				li
-					a#hideNav(href="#") Stäng
-				li
-					a(href="/")
-						img.logo(src="../src/assets/K-8.png", alt="Våran logga")
-				li
-					a(href="/valkommen") Kalkylator
-				li
-					a(href="/produkter") Produkter
-					ul.dropdown-produkter
-						li
-							a(href="/valkommen") Katalog
-						li
-							a(href="/valkommen") Annat
-						li
-							a(href="/valkommen") Varor
-				li
-					a(href="/om-oss") Om oss
-			ul
-				li
-					a(href="/registrera-dig") Registrera dig
-				li
-					a(href="/logga-in") Logga in
-
+	nav
+		// Grunden för en nav
+		ul
+			li
+				a(href="/")
+					img(src="../src/assets/logga.png", alt="Logotyp")
+			li.search
+				form(action="#")
+					input(type="text", placeholder="Sök efter produkt")
+			li
+				a(href="/logga-in")
+					img(src="../src/assets/logga.png", alt="Användare")
+				p Logga in/bli medlem
+			li
+				a(href="/om-oss") Om Oss
+			li
+				a(href="/kundvagn")
+					img(src="../src/assets/logga.png", alt="Kundvagn")
+			li
+				a#show-navigation(href="#")
+					img(src="../src/assets/logga.png", alt="Visa navigation")
+		ul#navigation
+			li
+				a#hide-navigation(href="#")
+					img(src="../src/assets/logga.png", alt="Stäng nav")
+			li.search
+				form(action="#")
+					input(type="text", placeholder="Sök efter produkt")
+			li
+				a(href="#") Kategori 1
+			li
+				a(href="#") Kategori 2
+			li
+				a(href="#") Kategori 3
+			li
+				a(href="#") Kategori 4
+			li
+				a(href="#") Kategori 5

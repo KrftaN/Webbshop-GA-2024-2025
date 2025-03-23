@@ -13,31 +13,32 @@ exports.getIndex = (req, res) => {
 
 exports.getLogin = (req, res) => {
 	res.status(200).render("login", {
-		pageStyles: "logga-in-style",
+		pageStyles: "login-style",
 		title: "Logga in",
 	});
 };
 
 exports.getSignup = (req, res) => {
 	res.status(200).render("signup", {
-		pageStyles: "registrera-dig-style",
+		pageStyles: "login-style",
 		title: "Registrera dig",
 	});
 };
 
 exports.getForgot = (req, res) => {
 	res.status(200).render("forgot", {
-		pageStyles: "glömt-lösenord-style",
+		pageStyles: "login-style",
 		title: "Glömt lösendord",
 	});
 };
 
-exports.getProducts = catchAsync(async (req, res) => {
+exports.getShop = catchAsync(async (req, res) => {
 	const Products = await Product.find();
-	res.status(200).render("products", {
-		pageStyles: "produkter-style",
-		title: "Produkter",
+	res.status(200).render("shop", {
+		pageStyles: "shop",
+		title: "Shop",
 		Products,
+		noStandard: true,
 	});
 });
 
@@ -62,14 +63,20 @@ const getError = (exports.getError = async (req, res, message, statusCode) => {
 		statusCode,
 		pageStyles: "error-style",
 		noStandard: true,
-	}); 
+	});
 });
 
-exports.getWelcome = (req, res) => {
-	res.status(200).render("welcome", {
-		pageStyles: "välkommen-style",
-		title: "Klasskassan - Välkommen",
-		noStandard: true,
+exports.getAboutUs = (req, res) => {
+	res.status(200).render("aboutUs", {
+		pageStyles: "about-us-style",
+		title: "Om oss",
+	});
+};
+
+exports.getShoppingCart = (req, res) => {
+	res.status(200).render("shoppingCart", {
+		pageStyles: "shopping-cart-style",
+		title: "Kundvagn",
 	});
 };
 

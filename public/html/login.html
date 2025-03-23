@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logga in</title>
-    <link href="../css/nav-style.css" rel="stylesheet">
-    <link href="../css/login-style.css" rel="stylesheet">
-</head>
-<body>
-    <main> 
-        <h1>Logga in</h1>
-        <div class="form">
-            <form action="index.html" method="post"> <!--Här är mitt formulär, här har jag en action vilket är vart man hamnar efter man tryckt på submit, använder metod post vilket skickar informationen genom bodyn separat medans get (den andra metoden) skickar det genom URL:en-->
-                <label for="username">Användarnamn:</label> <!--Kopplad till min input och visar texten Användarnamn:-->
-                <input type="text" id="username" name="username" placeholder="Ange användarnamn" pattern="[a-öA-Ö0-9]+" required> <!--En input med typ text som har id och name username vilket gör att jag kan länka label till den, har även en placeholder vilket visar text medans användaren inte matat in något i rutan. Har också en pattern vilket definerar vad som användaren får mata in, användaren får inte mata in tecken utanför dessa, har också en required vilket gör att jag inte kan klicka submit utan att fylla i den -->
-    
-                <label for="password">Lösenord:</label>
-                <input type="password" id="password" name="password" placeholder="Ange lösenord" required> <!--Typ lösernord, gör texten till svarta prickar istället för att vissa användarens inputs för att ge användaren privicy med sitt lösernord-->
-                <br><br>
-                <section>
-                    <input type="checkbox" id="checkbox" name="checkbox" value="kom ihåg mig">
-                    <label for="checkbox">Kom ihåg mig</label>
-                </section> 
-                <br>
-            
-                <button type="submit">Logga in</button> <!--En knapp för att skicka in användarens inmatning och skicka användaren till action sidan-->
-            </form>
-            <form action="register.html">
-                <button>Skapa konto</button> <!--En knapp-->
-            </form>
-        </div>
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Logga in</title>
+		<link href="../css/nav-style.css" rel="stylesheet" />
+		<link href="../css/login-style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header></header>
+			<main>
+				<div class="form">
+					<form action="index.html" method="post">
+						<!--Här är mitt formulär, här har jag en action vilket är vart man hamnar efter man tryckt på submit, använder metod post vilket skickar informationen genom bodyn separat medans get (den andra metoden) skickar det genom URL:en-->
+						<h2>Logga in</h2>
+						<label for="email">E-post:</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Ange din e-postadress"
+							required
+						/>
+
+						<label for="password">Lösenord:</label>
+						<input
+							type="password"
+							id="password"
+							name="password"
+							placeholder="Ange lösenord"
+							required
+						/>
+						<!--Typ lösernord, gör texten till svarta prickar istället för att vissa användarens inputs för att ge användaren privicy med sitt lösernord-->
+						<br /><br />
+						<section>
+							<input
+								type="checkbox"
+								id="checkbox"
+								name="checkbox"
+								value="kom ihåg mig"
+							/>
+							<label for="checkbox">Kom ihåg mig</label>
+							<a href="forgot-password.html">Glömt lösernord?</a>
+						</section>
+						<br />
+
+						<button type="submit">Logga in</button>
+						<!--En knapp för att skicka in användarens inmatning och skicka användaren till action sidan-->
+					</form>
+					<form action="register.html">
+						<button>Skapa konto</button>
+						<!--En knapp-->
+					</form>
+				</div>
+			</main>
+		</div>
+	</body>
 </html>

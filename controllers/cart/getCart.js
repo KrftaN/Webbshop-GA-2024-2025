@@ -1,18 +1,13 @@
 const { catchAsync } = require("../../utils/catchAsync");
-const Product = require("../../models/productModel");
-/* const AppError = require("../../utils/appError");
-const { formatManufacturerName } = require("../../utils/formatManufacturerName");
-const { downloadImage } = require("../../utils/downloadImage"); */
+const Cart = require("../../models/cartModel");
 
 exports.getCart = catchAsync(async (req, res, next) => {
-	const { id, amount } = req.body;
+	const userId = req.user.id;
 
-	console.log(req.body);
+	const cart = await Cart.findOne({ userId });
 
-	const product = await Product.findById({ id });
-
-	res.status(201).json({
+	res.status(200).json({
 		status: "success",
-		product,
+		cart,
 	});
 });

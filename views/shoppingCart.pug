@@ -1,0 +1,103 @@
+extends base
+
+block content
+    main
+        h2 Din varukorg
+        section
+            article
+                section
+                    img(src="../src/assets/logga.png", alt="Produkt")
+                    section
+                        h3 Produktnamn
+                        p Prdoucentnamn
+                        a(href="#") Ta bort X
+                section
+                    form(action="#")
+                        fieldset
+                            button#button-decrease -
+                            p#amount-counter 1
+                            button#button-increase +
+                        p 100kr/hg
+                p 200 kr
+            article
+                section
+                    img(src="../src/assets/logga.png", alt="Produkt")
+                    section
+                        h3 Produktnamn
+                        p Prdoucentnamn
+                        a(href="#") Ta bort X
+                section
+                    form(action="#")
+                        fieldset
+                            button#button-decrease -
+                            p#amount-counter 1
+                            button#button-increase +
+                        p 100kr/hg
+                p 200 kr
+            table
+                thead
+                    tr
+                        th(scope="col") Prudokt
+                        th(scope="col") Pris
+                        th(scope="col") Kvantitet
+                        th(scope="col") Summa
+                tbody
+                    tr
+                        th(scope="row")
+                            img(src="../src/assets/logga.png", alt="Produkt")
+                            section
+                                h3 Produktnamn
+                                p Prdoucentnamn
+                                a(href="#") Ta bort X
+                        td 100kr/hg
+                        td
+                            form(action="#")
+                                fieldset
+                                    button#button-decrease -
+                                    p#amount-counter 1
+                                    button#button-increase +
+                        td 200kr
+        form(action="#")
+            fieldset
+                legend Fraktmetod
+                input#postombud(type="radio", name="postombud", value="postombud1", checked)
+                label(for="postombud")
+                    img(src="../src/assets/logga.png", alt="Postombud")
+                    | Postombud - 69 kr
+                .line
+                input#postombud(type="radio", name="postombud", value="postombud2")
+                label(for="postombud")
+                    img(src="../src/assets/logga.png", alt="Postombud")
+                    | Postombud - 69 kr
+            fieldset
+                legend Betalningsmetod
+                input#betalningsmetod(type="radio", name="betalningsmetod", value="betalningsmetod1", checked)
+                label(for="postombud")
+                    img(src="../src/assets/logga.png", alt="Postombud")
+                    | Betalningsmetod - 69 kr
+                .line
+                input#betalningsmetod(type="radio", name="betalningsmetod", value="betalningsmetod2")
+                label(for="postombud")
+                    img(src="../src/assets/logga.png", alt="Postombud")
+                    | Betalningsmetod - 69 kr
+        section
+            h3 Summering
+            section
+                p Frakt: 
+                p 99 kr
+                p Totalt: 
+                p 449 kr
+            button Frakt
+        form(action="#")
+            legend Fraktinformation
+            section
+                input#firstName(type="text", name="firstName", placeholder="Förnamn*", required)
+                input#lastName(type="text", name="lastName", placeholder="Efternamn*", required)
+                input#companyName(type="text", name="companyName", placeholder="Företagsnamn")
+                input#email(type="email", name="email", placeholder="E-post*", required)
+                input#adress(type="text", name="adress", placeholder="Adress*", required)
+                input#zip(type="number", name="zip", placeholder="Postnummer*", required)
+                input#ort(type="text", name="ort", placeholder="Ort*", required)
+                input#telephone(type="tel", name="telephone", placeholder="Telefonnummer*", required)
+            p Att betala: 449 kr
+            button(type="submit") Betala

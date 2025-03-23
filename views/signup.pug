@@ -2,22 +2,34 @@ extends base
 
 block content
   main
-    form#sign-up-form(action)
-      h2 Registrera ett konto 
-      input#name(type="text", placeholder="Skriv in ditt namn", required)      
-      input#email(type="text", placeholder="Skriv in din mail", required)
-      input#password(type="password", placeholder="Skriv in ditt lösenord", required)
-      input#passwordConfirm(type="password", placeholder="Bekräfta ditt lösenord", required)
-      section
-        input(type="checkbox", name="godkänner", required)
-        label(for="godkänner") Jag godkänner 
-          a(href="#") användarvillkoren
-      p Har du redan ett konto? 
-        a#log-in(href="/logga-in") Logga in
-      input(type="submit", value="Registrera dig")
-
-
-
-
-
+    .form
+      form(action="index.html", method="post")
+        h2 Skapa konto
+        label(for="first_name") Förnamn:
+        input(type="text", id="first_name", name="first_name", placeholder="Ange förnamn", pattern="[a-öA-Ö0-9]+", required)
+        label(for="second_name") Efterrnamn:
+        input(type="text", id="second_name", name="second_name", placeholder="Ange efternamn", pattern="[a-öA-Ö0-9]+", required)
+        label(for="birthday") Födelsedag:
+        input#birthday(type="date", name="birthday")
+        label(for="password") Lösenord:
+        input#password(type="password", name="password", placeholder="Ange lösenord", required)
+        input(type="password", placeholder="Repetera lösernord", id="confirm_password", required)
+        h3 Kön
+        .radiobox-group
+          input#kvinna(type="radio", name="radio", value="alternativ1")
+          label(for="kvinna") Kvinna
+          br
+          input#man(type="radio", name="radio", value="alternativ2")
+          label(for="man") Man
+          br
+          input#annat(type="radio", name="radio", value="alternativ")
+          label(for="annat") Annat
+        br
+        label(for="email") E-post:
+        input#email(type="email", name="email", placeholder="Ange din e-postadress", required)
+        br
+        br
+        button(type="submit") Skapa konto
+        a(href="/logga-in") 
+          button Logga in
 

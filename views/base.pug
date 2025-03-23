@@ -1,12 +1,15 @@
 doctype html
 html(lang="sv")
     head
-        link(rel="stylesheet", type="text/css", href="/css/standard-style.css")
-        link(rel="stylesheet", type="text/css", href=`/css/${pageStyles}.css`)
         meta(charset="UTF-8")
-        link(rel='shortcut icon' type='image/png' href='/src/assets/k-8.png')
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title #{title}
+        link(rel="icon", href="../src/assets/logga.png")
+        link(rel="stylesheet", type="text/css", href=`/css/${pageStyles}.css`)        
+        link(href="../css/nav-style.css", rel="stylesheet")
+        link(href="../css/footer-style.css", rel="stylesheet")
+        script(src="../scripts/script.js", defer)
+
 
     body 
         unless noStandard === true
@@ -18,11 +21,11 @@ html(lang="sv")
             include _footer
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js')
-        script(type='module' src='/script/navbar.js')
-        script(type='module' src='/script/alerts.js')
-        script(type='module' src='/script/login.js')
-        script(type='module' src='/script/signup.js')
-        script(type='module' src='/script/logout.js')
-        script(type='module' src='/script/resetPassword.js')
-        script(type='module' src='/script/forgotPassword.js')
-        script(type='module' src='/script/index.js')       
+        //script(type='module' src='/script/navbar.js')
+        //script(type='module' src='/script/alerts.js')
+        //script(type='module' src='/script/login.js')
+        //script(type='module' src='/script/signup.js')
+        //script(type='module' src='/script/logout.js')
+        //script(type='module' src='/script/resetPassword.js')
+        //script(type='module' src='/script/forgotPassword.js')
+        //script(type='module' src='/script/index.js')       

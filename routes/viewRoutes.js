@@ -5,12 +5,13 @@ const {
 	getLogin,
 	getSignup,
 	getForgot,
-	getProducts,
+	getShop,
 	getProductPage,
 	getResetPassword,
 	confirmEmail,
 	redirectIfLoggedIn,
-	getWelcome,
+	getAboutUs,
+	getShoppingCart,
 } = require("../controllers/viewsController");
 const { protect } = require("../controllers/authentication/protect");
 const { permission } = require("../controllers/authentication/permission");
@@ -20,12 +21,13 @@ router.use(isLoggedIn);
 
 router.get("/", getIndex);
 router.get("/logga-in", redirectIfLoggedIn, getLogin);
-router.get("/registrera-dig", redirectIfLoggedIn, getSignup);
+router.get("/registrera", redirectIfLoggedIn, getSignup);
 router.get("/glomt-losenord", redirectIfLoggedIn, getForgot);
-router.get("/produkter", getProducts);
+router.get("/shop", getShop);
 router.get("/produkter/:id", getProductPage);
 router.get("/aterstall-losenord/:token", getResetPassword);
 router.get("/bekrafta-email/:token", confirmEmail);
-router.get("/valkommen", getWelcome);
+router.get("/om-oss", getAboutUs);
+router.get("/kundvagn", getShoppingCart);
 
 module.exports = router;

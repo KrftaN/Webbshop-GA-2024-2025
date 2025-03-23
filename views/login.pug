@@ -2,16 +2,21 @@ extends base
 
 block content
   main
-    form#log-in-form(action="#" method="post")
-      h2 Logga in
-      input#email(type="text", placeholder="Skriv in din mail", required)
-      input#password(type="password", placeholder="Skriv in ditt lösenord", required)
-      input(type="submit", value="Logga in")
-      section
-        input#keepLoggedIn(type="checkbox", name="remember-me")
-        label(for="remember-me") Kom ihåg mig
-      p
-        | Inte medlem? 
-        a(href="/registrera-dig") Registrera dig
-      p
-        a(href="/glomt-losenord") Glömt lösenord?
+    .form
+      form(action="index.html", method="post")
+        h2 Logga in
+        label(for="email") E-post:
+        input#email(type="email", name="email", placeholder="Ange din e-postadress", required)
+        label(for="password") Lösenord:
+        input#password(type="password", name="password", placeholder="Ange lösenord", required)
+        br
+        br
+        section
+          input#checkbox(type="checkbox", name="checkbox", value="kom ihåg mig")
+          label(for="checkbox") Kom ihåg mig
+          a(href="forgot-password.html") Glömt lösernord?
+        br
+        button(type="submit") Logga in
+      
+        button 
+          a(href="registrera") Skapa konto
