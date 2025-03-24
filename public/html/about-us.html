@@ -5,41 +5,120 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Om oss</title>
         <link href="../css/about-us-style.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/nav-style.css">
+        <link rel="stylesheet" href="../css/footer-style.css">
     </head>
+
     <body>
-        <main>
-            <section>
-                <h2>Om oss</h2>
-                <article>
-                    <img src="../src/assets/logga.png">
-                    <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu. Modus argumentum ne qui</p>
-                </article>
-            </section>
-            <section>
-                <h3>Vilka är vi?</h3>
-                <article>
-                    <img src="../src/assets/logga.png">
+        <div class="wrapper">
+            <header>
+                <nav> <!--Grunden för en nav-->
+                    <ul> 
+                        <li><a href="index.html"><img src="../src/assets/logga.png" alt="Logotyp"></a></li>
+                        <li class="search"><form action="#"><input type="text" placeholder="Sök efter produkt"></form></li>
+                        <li class="loggedIn">
+                            <a href="#"><img src="../src/assets/logga.png" alt="Användare"></a>
+                            <p>Zacharias Bergenholtz</p>
+
+                            <ul class="dropdownLoggaIn">
+                                <li>
+                                    <a href="#">Konto</a>
+                                </li>
+                                <li>
+                                    <button>Logga Ut</button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="about-us.html">Om Oss</a></li>
+                        <li><a href="shopping-cart.html"><img src="../src/assets/logga.png" alt="Kundvagn"></a></li>
+                        <li><a id="show-navigation" href="#"><img src="../src/assets/logga.png" alt="Visa navigation"></a></li>                    
+                    </ul>
+                    <ul id="navigation">
+                        <li><a id="hide-navigation" href="#"><img src="../src/assets/logga.png" alt="Stäng nav"></a></li>
+                        <li class="search"><form action="#"><input type="text" placeholder="Sök efter produkt"></form></li>
+                        <li><a href="#">Kategori 1</a></li>
+                        <li><a href="#">Kategori 2</a></li>
+                        <li><a href="#">Kategori 3</a></li>
+                        <li><a href="#">Kategori 4</a></li>
+                        <li><a href="#">Kategori 5</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <main>
+                <section>
+                    <h2>Om oss</h2>
+                    <article>
+                        <img src="../src/assets/logga.png">
+                        <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu. Modus argumentum ne qui</p>
+                    </article>
+                </section>
+                <section>
+                    <h3>Vilka är vi?</h3>
+                    <article>
+                        <img src="../src/assets/logga.png">
+                        <section>
+                            <h4>Zacharias</h4>
+                            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per</p>
+                        </section>
+                    </article>
+                    <article>
+                        <img src="../src/assets/logga.png">
+                        <section>
+                            <h4>Malte</h4>
+                            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per</p>
+                        </section>
+                    </article>
+                    <article>
+                        <img src="../src/assets/logga.png">
+                        <section>
+                            <h4>Kevin</h4>
+                            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per</p>
+                        </section>
+                    </article>
+                </section>
+            </main>
+            
+            <footer>
+                <section>
+                    <h2>Webbshoppen</h2>
+                    <img src="../src/assets/logga.png" alt="Logotyp">
+                </section>
+    
+                <section>
                     <section>
-                        <h4>Zacharias</h4>
-                        <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per</p>
+                        <h3>Kolumn</h3>
+                        <ul>
+                            <li><a href="#">Länk 1</a></li>
+                            <li><a href="#">Länk 1</a></li>
+                            <li><a href="#">Länk 1</a></li>
+                            <li><a href="#">Länk 1</a></li>
+                        </ul>
                     </section>
-                </article>
-                <article>
-                    <img src="../src/assets/logga.png">
+    
                     <section>
-                        <h4>Malte</h4>
-                        <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per</p>
+                        <h3>Kolumn</h3>
+                        <ul>
+                            <li><a href="#">Länk 1</a></li>
+                            <li><a href="#">Länk 1</a></li>
+                            <li><a href="#">Länk 1</a></li>
+                            <li><a href="#">Länk 1</a></li>
+                        </ul>
                     </section>
-                </article>
-                <article>
-                    <img src="../src/assets/logga.png">
-                    <section>
-                        <h4>Kevin</h4>
-                        <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per</p>
-                    </section>
-                </article>
-            </section>
-        </main>
-        
+                </section>
+    
+                <section>
+                    <img src="../src/assets/logga.png" alt="Länk">
+                    <img src="../src/assets/logga.png" alt="Länk">
+                    <img src="../src/assets/logga.png" alt="Länk">
+                </section>
+    
+                <section>
+                    <p>© 2024 Webbshop. All rights reserved.</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </section>
+            </footer>
+        </div>
     </body>
 </html>
