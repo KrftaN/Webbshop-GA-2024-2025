@@ -173,9 +173,9 @@ header nav > ul:last-child li a{
         padding-inline-start: 0;
         list-style-type: none;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-direction: row;
-        gap: 10px;
+        gap: 50px;
         width: 100%;
     }
     
@@ -225,7 +225,7 @@ header nav > ul:last-child li a{
     }
 
     header nav > ul:last-child li {
-        width: 230px;
+        width: 17vw;
     }
 
     header nav > ul:last-child li a {
@@ -270,5 +270,15 @@ header nav > ul:last-child li a{
         font-size: 1.3em;
         height: 35px;
         padding: 20px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    header nav > ul:first-child {
+        justify-content: space-evenly;
+    }
+
+    header nav > ul:last-child li {
+        width: 220px;
     }
 }
