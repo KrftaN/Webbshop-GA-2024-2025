@@ -7,6 +7,10 @@
 }
 
 /*====== Nav style ========*/
+h1 {
+    display: none;
+}
+
 header nav > {
     display: flex;
     flex-direction: column;
@@ -30,7 +34,10 @@ header nav > ul:first-child {
 
 header nav > ul:first-child li img{
     width: 50px;
-    border: 1px solid black;
+}
+
+header nav > ul:first-child li:first-child img {
+    width: 65px;
 }
 
 header nav > ul:first-child li.search {
@@ -49,6 +56,11 @@ header nav > ul:first-child li:nth-child(4) {
 header nav > ul:first-child li:nth-child(3) a {
     font-size: 1.2em;
     color: #000;
+    text-align: center;
+}
+
+header nav > ul:first-child li:nth-child(3) p {
+    text-align: center;
 }
 
 header nav > ul:first-child li:nth-child(4) a {
@@ -195,7 +207,6 @@ header nav > ul:last-child li a{
     
     header nav > ul:first-child li a img {
         width: 50px;
-        border: 1px solid black;
     }
 
     header nav > ul:first-child li.search {
@@ -277,6 +288,7 @@ header nav > ul:last-child li a{
         width: 250px;
         height: 40px;
         padding: 0;
+        margin: 10px;
         padding-inline-start: 2%;
         border-width: 0;
         font-size: 1.15em;

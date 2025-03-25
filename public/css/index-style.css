@@ -1,8 +1,13 @@
+body {
+    margin: 0;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(#ffffff, #eeeeee, #dadada);
 }
 
 main {
@@ -13,14 +18,15 @@ main {
 }
 
 main > section:nth-child(2) {
-    background-image: url("https://hips.hearstapps.com/hmg-prod/images/sopranos-mini-package-ledes-capricola-1547076318.jpg");
-    background-position: center;
+    background-image: url("../src/assets/forrest-banner.jpg");
+    background-position: 90% 0%;
     padding: 40px;
 }
 
 main > section:nth-child(2) p {
-    font-size: 1.3em;
+    font-size: 1.4em;
     text-align: center;
+    text-shadow: 1px 2px #fff;
 }
 
 main > section:nth-child(3) {
@@ -130,8 +136,8 @@ main > section:nth-child(5) article p {
 }
 
 main > section:nth-child(5) article > section{
-    background-image: url("https://hips.hearstapps.com/hmg-prod/images/sopranos-mini-package-ledes-capricola-1547076318.jpg");
-    background-position: center;
+    background-image: url("../src/assets/forrest-banner.jpg");
+    background-position: 90% 15%;
     height: 70px;
 }
 
@@ -205,7 +211,8 @@ main > section:nth-child(5) article > section{
     }
 
     main > section:nth-child(2) {
-        padding: 60px;
+        padding: 80px;
+        padding-bottom: 140px;
     }
 
     main > section:nth-child(4) {
