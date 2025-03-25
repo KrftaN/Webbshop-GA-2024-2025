@@ -1,8 +1,21 @@
+/*====== Global style ======*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*====== Nav style ========*/
 header nav > {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+header nav a + a {
+    display: none;
 }
 
 header nav > ul:first-child {
@@ -15,7 +28,7 @@ header nav > ul:first-child {
     width: 100%;
 }
 
-header nav > ul:first-child li a img {
+header nav > ul:first-child li img{
     width: 50px;
     border: 1px solid black;
 }
@@ -33,6 +46,11 @@ header nav > ul:first-child li:nth-child(4) {
     padding: 15px;
 }
 
+header nav > ul:first-child li:nth-child(3) a {
+    font-size: 1.2em;
+    color: #000;
+}
+
 header nav > ul:first-child li:nth-child(4) a {
     text-decoration: none;
     color: #000;
@@ -40,23 +58,18 @@ header nav > ul:first-child li:nth-child(4) a {
 }
 
 .dropdownLoggaIn {
-	margin-left: -10px;
+	margin-left: -40px;
     z-index: 1;
 	visibility: hidden;
 	opacity: 0;
 	transform: scaleY(0);
-	/* Start with no height (collapsed) */
 	transform-origin: top;
 	position: absolute;
-	/* Match the navbar background color */
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 	width: 140px;
-    margin-top: 200px;
 	transition: transform 0.3s ease, visibility 0s linear 0.3s, opacity 0.3s ease;
-	/* Add a transition for a smooth sliding-down effect */
-	backdrop-filter: blur(13px);
-	/* Add backdrop filter for the blurred effect */
+	backdrop-filter: blur(10px);
 }
 
 .dropdownLoggaIn li {
@@ -75,19 +88,16 @@ header nav > ul:first-child li:nth-child(4) a {
 
 .dropdownLoggaIn li a:hover,
 .dropdownLoggaIn button:hover {
-	background-color: #61876e;
+	background-color: #838383;
 	border-radius: 7px;
 }
 
 .loggedIn:hover .dropdownLoggaIn,
 .dropdownLoggaIn:hover {
 	visibility: visible;
-	opacity: 0.9;
-	/* Adjust the opacity as needed */
+	opacity: 1;
 	transform: scaleY(1);
-	/* Expand to full height on hover */
 	transition-delay: 0s;
-	/* Remove the delay on hover */
 }
 
 .dropdownLoggaIn button {
@@ -99,7 +109,6 @@ header nav > ul:first-child li:nth-child(4) a {
 	border: none;
 }
 
-
 header nav > ul:last-child {
     position: fixed;
     right: -100%;
@@ -107,7 +116,7 @@ header nav > ul:last-child {
     height: 100vh;
     margin: 0;
     padding-top: 10px;
-    background-color: #f3f3f3;
+    background-color: #bdbdbd;
     list-style-type: none;
     width: 80%;
     padding-inline-start: 0;
@@ -120,7 +129,7 @@ header nav > ul:last-child {
 header nav > ul:last-child li {
     text-decoration: none;
     width: 90%;
-    height: 70px;
+    height: 65px;
     border: 1px solid black;
     margin: 7px;
 }
@@ -168,6 +177,12 @@ header nav > ul:last-child li a{
     padding: 20px;
 }
 
+@media screen and (min-width: 600px) {
+    header nav > ul:first-child {
+        gap: 50px;
+    }
+}
+
 @media screen and (min-width: 900px) {
     header nav > ul:first-child {
         padding-inline-start: 0;
@@ -175,7 +190,6 @@ header nav > ul:last-child li a{
         display: flex;
         justify-content: center;
         flex-direction: row;
-        gap: 50px;
         width: 100%;
     }
     
@@ -185,6 +199,10 @@ header nav > ul:last-child li a{
     }
 
     header nav > ul:first-child li.search {
+        display: block;
+    }
+
+    header nav a + a {
         display: block;
     }
 
@@ -207,6 +225,11 @@ header nav > ul:last-child li a{
 
     header nav > ul:first-child li:nth-child(4) {
         display: block;
+    }
+
+    .dropdownLoggaIn {
+        margin-top: 140px;
+    	margin-left: -10px;
     }
 
     #show-navigation {

@@ -100,15 +100,12 @@ h4, p {
 }
 
 @media screen and (min-width: 1400px) {
-    main section:first-of-type {
-        width: 60%;
-    }
-
     main section:first-of-type img {
         width: 30%;
     }
 
-    main section:last-child {
+    main {
         width: 60%;
+        padding: 20px;
     }
 }
