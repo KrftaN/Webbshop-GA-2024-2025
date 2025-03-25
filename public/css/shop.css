@@ -1,8 +1,3 @@
-.wrapper {
-    display: grid;
-    height: fit-content;
-}
-
 main {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,7 +13,6 @@ main {
     text-align: center;
     font-size: 60px;
 }
-
 
 .product-list > h2{
     display: none;
@@ -74,6 +68,10 @@ main {
     main{
         display: flex;
     }
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
     .mobile-product{
         display: none;
     }
@@ -112,6 +110,12 @@ main {
     .product-featured {
         display: flex;
         gap: 20px;
+        transition: all 0.5s ease;  
+    }
+    .product-featured:hover,
+    .product-featured button:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.445);
     }
     .product-featured .info {
         width: 30%;
@@ -133,6 +137,12 @@ main {
         box-shadow: 3px 2px 20px #bfbfbf;
         padding: 10px;
         text-align: center;
+        transition: all 0.5s ease;  
+    }
+    .product-card:hover,
+    .product-listing button:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.445);
     }
     .product-card button, .product-featured button {
         margin-top: 10px;

@@ -1,13 +1,3 @@
-.wrapper{
-  display: grid;
-  grid-template-rows: 1fr 6fr 1fr;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
-  height: 98vh;
-}
-
 main{
   display: grid;
   grid-area: main;
