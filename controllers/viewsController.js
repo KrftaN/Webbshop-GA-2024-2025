@@ -33,26 +33,27 @@ exports.getForgot = (req, res) => {
 };
 
 exports.getShop = catchAsync(async (req, res) => {
-	const Products = await Product.find();
+	const products = await Product.find();
 	res.status(200).render("shop", {
 		pageStyles: "shop",
 		title: "Shop",
-		Products,
-		noStandard: true,
+		products,
+		noStandard: false,
 	});
 });
 
 exports.getProductPage = catchAsync(async (req, res) => {
-	const id = req.params.id;
+	/* 	const id = req.params.id;
 	let product = await Product.findById(id);
 
 	product.formattedName = formatManufacturerName(product.manufacturer); //Lägger till det formaterade productentnamnet för att stödja filformatet;
 	product.kylvara = `${product.requiresFridge ? "Ja" : "Nej"}`;
-
+ */
 	res.status(200).render("productPage", {
-		pageStyles: "produkt-style",
-		title: `${product.name}`,
-		product,
+		pageStyles: "product-style",
+		//title: `${product.name}`,
+		//product,
+		noStandard: false,
 	});
 });
 
