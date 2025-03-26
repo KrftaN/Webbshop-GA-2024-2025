@@ -6,17 +6,20 @@ const crypto = require("crypto");
 
 exports.signup = catchAsync(async (req, res, next) => {
 	//Skapar en ny användare och ger dem en token
-	const { name, email, password, passwordConfirm } = req.body;
+	const { firstName, lastName, email, password, passwordConfirm, birthDate, gender } = req.body;
 
 	const resetToken = crypto.randomBytes(32).toString("hex");
 
 	const emailConfirmationToken = crypto.createHash("sha256").update(resetToken).digest("hex");
 
 	await User.create({
-		name,
+		firstName,
+		lastName,
 		email,
 		password,
 		passwordConfirm,
+		birthDate,
+		gender,
 		passwordChangedAt: Date.now() - 1000,
 		emailConfimationExpires: Date.now() + 10 * 60 * 1000,
 		emailConfirmationToken,

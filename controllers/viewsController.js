@@ -1,5 +1,4 @@
 const { catchAsync } = require("../utils/catchAsync");
-const { formatManufacturerName } = require("../utils/formatManufacturerName");
 const Product = require("../models/productModel");
 const User = require("../models/userModel");
 const crypto = require("crypto");
@@ -43,16 +42,13 @@ exports.getShop = catchAsync(async (req, res) => {
 });
 
 exports.getProductPage = catchAsync(async (req, res) => {
-	/* 	const id = req.params.id;
+	const id = req.params.id;
 	let product = await Product.findById(id);
 
-	product.formattedName = formatManufacturerName(product.manufacturer); //Lägger till det formaterade productentnamnet för att stödja filformatet;
-	product.kylvara = `${product.requiresFridge ? "Ja" : "Nej"}`;
- */
 	res.status(200).render("productPage", {
 		pageStyles: "product-style",
-		//title: `${product.name}`,
-		//product,
+		title: `${product.name}`,
+		product,
 		noStandard: false,
 	});
 });

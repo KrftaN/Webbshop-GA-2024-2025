@@ -18,7 +18,7 @@ const adminRouter = require("./routes/adminRoutes");
 const productRouter = require("./routes/productRoutes");
 const cartRouter = require("./routes/cartRoutes");
 const globalErrorHandler = require("./controllers/errorController");
-/* const { validateImages } = require("./utils/validateImages");*/
+const { validateImages } = require("./utils/validateImages");
 const { getError } = require("./controllers/viewsController");
 // Rate limiter för att förhindra missbruk från en enda IP-adress
 const limiter = rateLimit({
@@ -28,7 +28,7 @@ const limiter = rateLimit({
 	skip: (req) => req.headers["x-forwarded-for"] === undefined,
 });
 
-//validateImages(); //Tar bort alla bilder som inte används till produkterna, och laddar ned alla bilder
+validateImages(); //Tar bort alla bilder som inte används till produkterna, och laddar ned alla bilder
 
 //app.enable("trust proxy");
 

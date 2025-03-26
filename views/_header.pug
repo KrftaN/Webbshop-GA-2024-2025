@@ -1,39 +1,86 @@
 header
-	nav
-		// Grunden för en nav
-		ul
-			li
-				a(href="/")
-					img(src="../src/assets/logga.png", alt="Logotyp")
-			li.search
-				form(action="#")
-					input(type="text", placeholder="Sök efter produkt")
-			li
-				a(href="/logga-in")
+	if user	
+		nav
+			// Grunden för en nav
+			ul
+				li
+					a(href="/")
+						img(src="../src/assets/logga.png", alt="Logotyp")
+				li.search
+					form(action="#")
+						input(type="text", placeholder="Sök efter produkt")
+				li.loggedIn
 					img(src="../src/assets/logga.png", alt="Användare")
-				p Logga in/bli medlem
-			li
-				a(href="/om-oss") Om Oss
-			li
-				a(href="/kundvagn")
-					img(src="../src/assets/logga.png", alt="Kundvagn")
-			li
-				a#show-navigation(href="#")
-					img(src="../src/assets/logga.png", alt="Visa navigation")
-		ul#navigation
-			li
-				a#hide-navigation(href="#")
-					img(src="../src/assets/logga.png", alt="Stäng nav")
-			li.search
-				form(action="#")
-					input(type="text", placeholder="Sök efter produkt")
-			li
-				a(href="#") Kategori 1
-			li
-				a(href="#") Kategori 2
-			li
-				a(href="#") Kategori 3
-			li
-				a(href="#") Kategori 4
-			li
-				a(href="#") Kategori 5
+					| #{user.name}
+					ul.dropdownLoggaIn
+						li
+							form#log-out-form(action="#")
+								button(type="submit") Logga Ut
+
+				li
+					a(href="/om-oss") Om Oss
+				li
+					a(href="/kundvagn")
+						img(src="../src/assets/logga.png", alt="Kundvagn")
+				li
+					a#show-navigation(href="#")
+						img(src="../src/assets/logga.png", alt="Visa navigation")
+			ul#navigation
+				li
+					a#hide-navigation(href="#")
+						img(src="../src/assets/logga.png", alt="Stäng nav")
+				li.search
+					form(action="#")
+						input(type="text", placeholder="Sök efter produkt")
+				li
+					a(href="#") Kategori 1
+				li
+					a(href="#") Kategori 2
+				li
+					a(href="#") Kategori 3
+				li
+					a(href="#") Kategori 4
+				li
+					a(href="#") Kategori 5
+	else
+		nav
+			// Grunden för en nav
+			ul
+				li
+					a(href="/")
+						img(src="../src/assets/logga.png", alt="Logotyp")
+				li.search
+					form(action="#")
+						input(type="text", placeholder="Sök efter produkt")
+				li
+					a(href="/logga-in")
+						img(src="../src/assets/logga.png", alt="Användare")
+					a(href="/logga-in") Logga in/registrera
+				li
+					a(href="/om-oss") Om Oss
+				li
+					a(href="/kundvagn")
+						img(src="../src/assets/logga.png", alt="Kundvagn")
+				li
+					a#show-navigation(href="#")
+						img(src="../src/assets/logga.png", alt="Visa navigation")
+			ul#navigation
+				li
+					a#hide-navigation(href="#")
+						img(src="../src/assets/logga.png", alt="Stäng nav")
+				li.search
+					form(action="#")
+						input(type="text", placeholder="Sök efter produkt")
+				li
+					a(href="#") Kategori 1
+				li
+					a(href="#") Kategori 2
+				li
+					a(href="#") Kategori 3
+				li
+					a(href="#") Kategori 4
+				li
+					a(href="#") Kategori 5
+
+
+
