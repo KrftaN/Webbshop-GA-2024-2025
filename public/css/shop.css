@@ -114,7 +114,7 @@ main {
     }
     .product-featured:hover,
     .product-featured button:hover{
-        transform: scale(1.05);
+        transform: scale(1.03);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.445);
     }
     .product-featured .info {
@@ -141,7 +141,7 @@ main {
     }
     .product-card:hover,
     .product-listing button:hover{
-        transform: scale(1.05);
+        transform: scale(1.03);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.445);
     }
     .product-card button, .product-featured button {
