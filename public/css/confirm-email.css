@@ -1,0 +1,14 @@
+.wrapper {
+    justify-content: space-between;
+    width: auto;
+}
+
+main {
+    padding: 80px;
+}
+
+@media screen and (min-width: 500px) {
+    .wrapper {
+        height: 100vh;
+    }
+}

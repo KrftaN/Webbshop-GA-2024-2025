@@ -35,6 +35,10 @@ main > section:nth-child(3) {
     align-items: center;
 }
 
+main > section:nth-child(3) a{
+    color: inherit;
+}
+
 main > section:nth-child(3) > section {
     display: flex;
     flex-direction: column;
