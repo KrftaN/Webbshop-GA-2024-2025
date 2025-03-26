@@ -87,6 +87,10 @@ table form fieldset button {
     padding: 8px;
 }
 
+button {
+    cursor: pointer;
+}
+
 main article form fieldset p,
 table form fieldset p {
     border-style: solid;

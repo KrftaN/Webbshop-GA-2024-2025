@@ -8,7 +8,8 @@
         <link rel="icon" href="../src/assets/logga.png">
         <link href="../css/shopping-cart-style.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/nav-style.css">
-        <script src="../scripts/script.js" defer></script>
+        <script src="../scripts/navbar.js" defer></script>
+        <script src="../scripts/numberSelect.js" defer></script>
     </head>
 
     <body>
@@ -49,11 +50,11 @@
                             </section>
                         </section>
                         <section>
-                            <form action="#">
+                            <form class="form1" action="#">
                                 <fieldset>
-                                    <button id="button-decrease">-</button>
-                                    <p id="amount-counter">1</p>
-                                    <button id="button-increase">+</button>
+                                    <button class="sc-button--">-</button>
+                                    <p class="sc-amount-counter">1</p>
+                                    <button class="sc-button-+">+</button>
                                 </fieldset>
                                 <p>100kr/hg</p>
                             </form>
@@ -71,11 +72,11 @@
                             </section>
                         </section>
                         <section>
-                            <form action="#">
+                            <form class="form2" action="#">
                                 <fieldset>
-                                    <button id="button-decrease">-</button>
-                                    <p id="amount-counter">1</p>
-                                    <button id="button-increase">+</button>
+                                    <button class="sc-button--">-</button>
+                                    <p class="sc-amount-counter">1</p>
+                                    <button class="sc-button-+">+</button>
                                 </fieldset>
                                 <p>100kr/hg</p>
                             </form>
@@ -105,11 +106,33 @@
                                 </th>
                                 <td>100kr/hg</td>
                                 <td>                        
-                                    <form action="#">
+                                    <form class="form1" action="#">
                                         <fieldset>
-                                            <button id="button-decrease">-</button>
-                                            <p id="amount-counter">1</p>
-                                            <button id="button-increase">+</button>
+                                            <button class="sc-button--">-</button>
+                                            <p class="sc-amount-counter">1</p>
+                                            <button class="sc-button-+">+</button>
+                                        </fieldset>
+                                    </form>
+                                </td>
+                                <td>200kr</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">
+                                    <img src="../src/assets/logga.png" alt="Produkt">
+                                    <section>
+                                        <h3>Produktnamn</h3>
+                                        <p>Prdoucentnamn</p>
+                                        <a href="#">Ta bort X</a>
+                                    </section>
+                                </th>
+                                <td>100kr/hg</td>
+                                <td>                        
+                                    <form class="form2" action="#">
+                                        <fieldset>
+                                            <button class="sc-button--">-</button>
+                                            <p class="sc-amount-counter">1</p>
+                                            <button class="sc-button-+">+</button>
                                         </fieldset>
                                     </form>
                                 </td>
