@@ -5,18 +5,15 @@ const { formatManufacturerName } = require("../../utils/formatManufacturerName")
 const { downloadImage } = require("../../utils/downloadImage"); */
 
 exports.createProduct = catchAsync(async (req, res, next) => {
-	const { name, description, manufacturer, manufacturerLink, price, requiresFridge, image } = req.body;
+	const { name, description, price, image } = req.body;
 
 	console.log(req.body);
 
 	const product = await Product.create({
 		name,
 		description,
-		manufacturer,
-		manufacturerLink,
 		price,
-		requiresFridge,
-		image
+		image,
 	});
 
 	res.status(201).json({

@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const loginForm = getElementById("log-in-form");
 	const signUpForm = getElementById("sign-up-form");
+	const logOutForm = getElementById("log-out-form");
 	const forgotPasswordForm = getElementById("forgot-password-form");
 	const resetPasswordForm = getElementById("reset-password-form");
 	const confirmEmailForm = getElementById("confirm-email-form");
@@ -69,12 +70,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		signUpForm.addEventListener("submit", function (e) {
 			e.preventDefault();
 
-			const name = getElementById("name").value;
+			const firstName = getElementById("firstName").value;
+			const lastName = getElementById("lastName").value;
 			const email = getElementById("email").value;
 			const password = getElementById("password").value;
 			const passwordConfirm = getElementById("passwordConfirm").value;
+			const birthDate = getElementById("birthDate").value;
+			const gender = document.querySelector('input[name="gender"]:checked').value;
 
-			signup(name, email, password, passwordConfirm);
+			console.log(firstName, lastName, email, password, passwordConfirm, gender, birthDate);
+
+			signup(firstName, lastName, email, password, passwordConfirm, gender, birthDate);
 		});
 	}
 
@@ -108,10 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Logout button
-	const logoutButton = getElementById("logout-button");
-	if (logoutButton) {
-		console.log("Logout button loaded");
+	if (logOutForm) {
+		logOutForm.addEventListener("submit", function (e) {
+			e.preventDefault();
 
-		logoutButton.addEventListener("click", logout);
+			logout();
+		});
 	}
 });

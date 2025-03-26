@@ -4,7 +4,15 @@ const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 
 const userSchema = new mongoose.Schema({
-	name: { type: String, required: [true, "Ogiltigt namn!"] },
+	firstName: { type: String, required: [true, "Ogiltigt förnamn!"] },
+	lastName: { type: String, required: [true, "Ogiltigt efternamn!"] },
+	gender: { type: String, required: [true, "Var god uppge kön!"] },
+	birthDate: {
+		type: Date,
+		min: "1900-01-01",
+		max: Date.now(),
+		required: [true, "Var god och lämna ditt födelsedatum!"],
+	},
 	email: {
 		type: String,
 		required: [true, "Var god och lämna en e-post adress!"],

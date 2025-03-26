@@ -3,10 +3,10 @@ extends base
 block content
 	main
 		article
-			img(src="../src/assets/logga.png", alt="Produkt")
+			img(src=`/src/products/${product._id}.jpg`, alt=product.name)
 			section
-				h2 Produktnamn
-				p 600 SEK/styck
+				h2 #{product.name}
+				p #{product.price}kr
 				form(action="#")
 					fieldset
 						button#button-decrease -
@@ -28,4 +28,4 @@ block content
 						a(href="#") Frågor? Kontakta oss
 		section
 			h3 Beskrivning
-			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel reprehenderit at fugiat nobis qui, officia quibusdam dolorum, delectus esse natus ad deleniti consectetur quos earum laborum numquam dolorem quo reiciendis commodi? Voluptatibus, corrupti quod. Ex numquam quaerat voluptas neque natus officia, debitis sed repellendus ullam. Provident optio vitae quos sequi! Possimus recusandae labore eius eveniet enim cumque officia quaerat nihil nisi, earum aliquid accusamus culpa rem aperiam animi ullam dolore quae facilis blanditiis facere maiores! Incidunt, itaque id nostrum quis harum corrupti voluptatibus eos odit! Reprehenderit explicabo quod laboriosam eveniet, ex, quidem velit culpa maiores neque illum animi natus sint.
+			p #{product.description}

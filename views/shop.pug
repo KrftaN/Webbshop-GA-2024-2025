@@ -66,10 +66,12 @@ block content
 				h2 Sortiment
 				.product-listing
 					each product in products
-						.product-card
-							img(src="https://via.placeholder.com/150", alt="Produktbild")
-							h3 #{product.name}
-							p #{product.price}
-							p Lorem ipsum dolor sit amet et delectus
-							button Lägg till i varukorgen 🛒
+						article.product-card
+							a(href=`/produkt/${product._id}`)
+								img(src=`/src/products/${product._id}.jpg`, alt=product.name)
+								h3 #{product.name}
+								p #{product.price}
+								p Lorem ipsum dolor sit amet et delectus
+							form(action="#")
+								button(type="submit") Lägg till i varukorgen 🛒
 					

@@ -1,10 +1,18 @@
 import { showAlert } from "./alerts.js";
-export const signup = async (name, email, password, passwordConfirm) => {
+export const signup = async (
+	firstName,
+	lastName,
+	email,
+	password,
+	passwordConfirm,
+	gender,
+	birthDate
+) => {
 	try {
 		await axios({
 			method: "POST",
-			url: `https://localhost:3000/api/v1/users/signup`,
-			data: { name, email, password, passwordConfirm },
+			url: `http://localhost:3000/api/v1/users/signup`,
+			data: { firstName, lastName, email, password, passwordConfirm, gender, birthDate },
 			debug: false,
 		});
 

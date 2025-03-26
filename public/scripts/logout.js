@@ -3,7 +3,7 @@ export const logout = async () => {
 	try {
 		await axios({
 			method: "POST",
-			url: `https://localhost:3000/api/v1/users/logout`,
+			url: `http://localhost:3000/api/v1/users/logout`,
 			debug: false,
 		}).then(() => {
 			location.assign("/");

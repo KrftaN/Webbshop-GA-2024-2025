@@ -12,13 +12,14 @@ html(lang="sv")
 
 
     body 
-        unless noStandard === true
-            include _header
-        
-        block content
+        div.wrapper
+            unless noStandard === true
+                include _header
+            
+            block content
 
-        unless noStandard === true
-            include _footer
+            unless noStandard === true
+                include _footer
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js')
         script(type='module' src='/scripts/alerts.js')
