@@ -59,7 +59,7 @@ main section > a{
   margin-left: auto;
 }
 
-button{
+button {
   background-color: #d8d7d7;
   color: rgb(58, 58, 58);
   padding: 12px 18px;
@@ -68,6 +68,16 @@ button{
   cursor: pointer;
   width: 100%; /* Full width buttons for mobile */
   font-size: 22px;
+}
+
+.form a:last-of-type {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  background-color: #d6d6d6;
+  font-size: 1.1em;
+  color: rgb(58, 58, 58);
+  text-decoration: none;
 }
 
 button[type=submit]{
