@@ -99,7 +99,7 @@ main > section:nth-child(4) article {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 15px;
+    padding: 30px;
     box-shadow: 3px 2px 20px #979797;
     border-radius: 7px;
 }
@@ -170,6 +170,8 @@ main > section:nth-child(5) article > section{
 }
 
 @media screen and (min-width:800px) {
+    main {
+    }
     main > section:nth-child(3) {
         width: 90%;
     }
@@ -187,7 +189,7 @@ main > section:nth-child(5) article > section{
 
     main > section:nth-child(4) article {
         flex-direction: row;
-        width: 85%;
+        width: 65%;
     }
 
     main > section:nth-child(4) article img {
@@ -215,11 +217,6 @@ main > section:nth-child(5) article > section{
 }
 
 @media screen and (min-width: 1400px) {
-    main {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
     main > section:nth-child(2) {
         padding: 80px;
         padding-bottom: 140px;
@@ -240,7 +237,12 @@ main > section:nth-child(5) article > section{
 
 @media screen and (min-width: 1800px) {
     main {
-        margin-left: 200px;
-        margin-right: 200px;
+        margin-left: 220px;
+        margin-right: 220px;
+    }
+
+    main > section:nth-child(4) article {
+        flex-direction: row;
+        width: 75%;
     }
 }

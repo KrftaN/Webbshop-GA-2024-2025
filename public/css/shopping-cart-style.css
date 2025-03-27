@@ -84,7 +84,20 @@ table form fieldset {
 main article form fieldset button,
 table form fieldset button {
     width: 40px;
-    padding: 8px;
+    height: 35px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #04AA6D;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1.3em;
+}
+
+main article form fieldset button:active,
+table form fieldset button:active {
+    background-color: #1bc285;
+    transition: 0.1s ease;
+    transform: scale(0.9);
 }
 
 button {
@@ -99,6 +112,7 @@ table form fieldset p {
     padding: 8px;
     width: 30px;
     text-align: center;
+    border-radius: 5px;
 }
 
 main form:nth-child(3) {
@@ -138,8 +152,7 @@ main form:nth-child(3) label {
 }
 
 main form:nth-child(3) label img {
-    width: 100%;
-    height: 40px;
+    width: 80%;
 }
 
 .line {
@@ -196,11 +209,27 @@ main section:nth-child(4) section p {
     margin: 0;
 }
 
-main section:nth-child(4) button, main form:last-child button {
+main section:nth-child(4) button, main > form:last-of-type button {
     width: 50%;
-    height: 40px;
-    border-style: none;
+    height: 50px;
+    border-width: 1px;
     border-radius: 5px;
+    background-color: #04AA6D;
+    color: #fff;
+    box-shadow: 3px 3px 10px #cecece;
+    font-size: 1.3em;
+}
+
+main section:nth-child(4) button:active,
+main > form:last-of-type button:active {
+    transition: 0.5s ease;
+    background-color: #23c98c;
+}
+
+main section:nth-child(4) button:hover,
+main > form:last-of-type button:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease;
 }
 
 main form:last-child {
@@ -219,6 +248,20 @@ main form:last-child input {
     width: 100%;
     height: 40px;
     font-size: 1.1em;
+    border-style: none;
+    border-radius: 5px;
+}
+
+main form:last-child input:invalid {
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 0, 0);
+    border-bottom-width: 2px;
+}
+
+main form:last-child input:valid {
+    border-bottom-style: solid;
+    border-bottom-color: rgb(0, 100, 0);
+    border-bottom-width: 2px;
 }
 
 main form:last-child p {
@@ -228,13 +271,13 @@ main form:last-child p {
 table,
 th,
 td {
-    border-collapse: collapse;
     text-align: center;
     vertical-align: middle;
 }
 
 table {
     display: none;
+    border-spacing: 10px;
 }
 
 table th[scope="col"] {
@@ -269,6 +312,10 @@ table td {
 
     main form:last-child section {
         width: 50%;
+    }
+
+    main section:nth-child(4) button, main > form:last-child button {
+        width: 250px;
     }
 }
 
