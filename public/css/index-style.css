@@ -17,6 +17,10 @@ main {
     gap: 30px;
 }
 
+main h2 {
+    font-size: 1.4em;
+}
+
 main > section:nth-child(2) {
     background-image: url("../src/assets/forrest-banner.jpg");
     background-position: 90% 0%;
@@ -170,8 +174,10 @@ main > section:nth-child(5) article > section{
 }
 
 @media screen and (min-width:800px) {
-    main {
+    main h2 {
+        font-size: 1.6em;
     }
+
     main > section:nth-child(3) {
         width: 90%;
     }

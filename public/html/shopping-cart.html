@@ -87,7 +87,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th scope="col">Prudokt</th>
+                                <th scope="col">Produkt</th>
                                 <th scope="col">Pris</th>
                                 <th scope="col">Kvantitet</th>
                                 <th scope="col">Summa</th>
@@ -98,11 +98,11 @@
                             <tr>
                                 <th scope="row">
                                     <img src="../src/assets/logga.png" alt="Produkt">
-                                    <section>
-                                        <h3>Produktnamn</h3>
+                                    <div>
+                                        <p class="table-head">Produktnamn</p>
                                         <p>Prdoucentnamn</p>
                                         <a href="#">Ta bort X</a>
-                                    </section>
+                                    </div>
                                 </th>
                                 <td>100kr/hg</td>
                                 <td>                        
@@ -120,11 +120,11 @@
                             <tr>
                                 <th scope="row">
                                     <img src="../src/assets/logga.png" alt="Produkt">
-                                    <section>
-                                        <h3>Produktnamn</h3>
+                                    <div>
+                                        <p class="table-head">Produktnamn</p>
                                         <p>Prdoucentnamn</p>
                                         <a href="#">Ta bort X</a>
-                                    </section>
+                                    </div>
                                 </th>
                                 <td>100kr/hg</td>
                                 <td>                        
@@ -148,17 +148,17 @@
                         <input type="radio" id="postombud" name="postombud" value="postombud1" checked>
                         <label for="postombud"><img src="../src/assets/postnord.png" alt="Postombud"> Postombud - 69 kr</label>
                         <div class="line"></div>
-                        <input type="radio" id="postombud" name="postombud" value="postombud2">
-                        <label for="postombud"><img src="../src/assets/postnord.png" alt="Postombud"> Postombud - 69 kr</label>
+                        <input type="radio" id="postombud2" name="postombud" value="postombud2">
+                        <label for="postombud2"><img src="../src/assets/postnord.png" alt="Postombud"> Postombud - 69 kr</label>
                     </fieldset>
     
                     <fieldset>
                         <legend>Betalningsmetod</legend>
                         <input type="radio" id="betalningsmetod" name="betalningsmetod" value="betalningsmetod1" checked>
-                        <label for="postombud"><img src="../src/assets/swish.png" alt="Postombud"> Betalningsmetod - 69 kr</label>
+                        <label for="betalningsmetod"><img src="../src/assets/swish.png" alt="Postombud"> Betalningsmetod - 69 kr</label>
                         <div class="line"></div>
-                        <input type="radio" id="betalningsmetod" name="betalningsmetod" value="betalningsmetod2">
-                        <label for="postombud"><img src="../src/assets/swish.png" alt="Postombud"> Betalningsmetod - 69 kr</label>
+                        <input type="radio" id="betalningsmetod2" name="betalningsmetod" value="betalningsmetod2">
+                        <label for="betalningsmetod2"><img src="../src/assets/swish.png" alt="Postombud"> Betalningsmetod - 69 kr</label>
                     </fieldset>
                 </form>
     
@@ -175,7 +175,7 @@
                 </section>
     
                 <form action="#">
-                    <legend>Fraktinformation</legend>
+                    <h3>Fraktinformation</h3>
     
                     <section>
                         <input type="text" name="firstName" id="firstName" placeholder="Förnamn*" required>

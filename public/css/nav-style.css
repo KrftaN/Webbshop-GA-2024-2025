@@ -33,13 +33,6 @@ header input {
     background-color: transparent;
 }
 
-header nav > {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 header nav a + a {
     display: none;
 }

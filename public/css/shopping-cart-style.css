@@ -49,12 +49,12 @@ table tr th img {
 
 main > section:nth-child(2) article > section:nth-child(1) h3,
 table tr th h3 {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 main > section:nth-child(2) article > section:nth-child(1) p,
 table tr th p {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 main > section:nth-child(2) form,
@@ -240,6 +240,10 @@ main form:last-child {
     gap: 5px;
 }
 
+main form:last-child h3 {
+    font-size: 1.4em;
+}
+
 main form:last-child section {
     width: 90%;
 }
@@ -296,6 +300,10 @@ table th[scope="row"] {
 
 table td {
     width: 120px;
+}
+
+p.table-head {
+    font-size: 1.4em;
 }
 
 @media screen and (min-width: 630px) {
