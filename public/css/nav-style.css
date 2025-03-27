@@ -166,6 +166,7 @@ header nav > ul:last-child li {
     height: 65px;
     border: 1px solid black;
     margin: 7px;
+    border-radius: 6px;
 }
 
 header nav > ul:last-child li:first-child img{
@@ -322,6 +323,7 @@ header nav > ul:last-child li a{
         border-color: #000;
         border-width: 1px;
         border-style: solid;
+        border-radius: 5px;
     }
     
     header nav > ul:last-child li a{
