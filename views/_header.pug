@@ -11,7 +11,7 @@ header
 						input(type="text", placeholder="Sök efter produkt")
 				li.loggedIn
 					img(src="../src/assets/logga.png", alt="Användare")
-					| #{user.name}
+					p #{user.firstName} #{user.lastName}
 					ul.dropdownLoggaIn
 						li
 							form#log-out-form(action="#")

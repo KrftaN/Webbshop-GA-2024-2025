@@ -7,42 +7,48 @@ let productButtonIncreaseElem;
 let productAmounCounterElem;
 
 function init() {
-    buttonDecreaseElem = document.getElementsByClassName("sc-button--");
-    buttonIncreaseElem = document.getElementsByClassName("sc-button-+");
-    amountCounterElem = document.getElementsByClassName("sc-amount-counter");
+	buttonDecreaseElem = document.getElementsByClassName("sc-button-minus");
+	buttonIncreaseElem = document.getElementsByClassName("sc-button-plus");
+	amountCounterElem = document.getElementsByClassName("sc-amount-counter");
 
-    productAmounCounterElem = document.getElementById("amount-counter");
-    productButtonDecreaseElem = document.getElementById("button--");
-    productButtonIncreaseElem = document.getElementById("button-+");
+	productAmounCounterElem = document.getElementById("amount-counter");
+	productButtonDecreaseElem = document.getElementById("button-minus");
+	productButtonIncreaseElem = document.getElementById("button-plus");
 
-    Array.from(buttonDecreaseElem).forEach(elem => { elem.addEventListener("click", changeAmount) });
-    Array.from(buttonIncreaseElem).forEach(elem => { elem.addEventListener("click", changeAmount) });
+	Array.from(buttonDecreaseElem).forEach((elem) => {
+		elem.addEventListener("click", changeAmount);
+	});
+	Array.from(buttonIncreaseElem).forEach((elem) => {
+		elem.addEventListener("click", changeAmount);
+	});
 
-    productButtonDecreaseElem.addEventListener("click", productChangeAmount);
-    productButtonIncreaseElem.addEventListener("click", productChangeAmount);
+	productButtonDecreaseElem.addEventListener("click", productChangeAmount);
+	productButtonIncreaseElem.addEventListener("click", productChangeAmount);
 }
 window.onload = init();
 
 function changeAmount() {
-    let form = this.form.className;
-    let name = this.innerHTML;
-    let amountCounter = document.querySelectorAll(`.${form} .sc-amount-counter`);
-    let value = +amountCounter[0].innerHTML;
+	let form = this.form.className;
+	let name = this.innerHTML;
+	let amountCounter = document.querySelectorAll(`.${form} .sc-amount-counter`);
+	let value = +amountCounter[0].innerHTML;
 
-    value = (name == "+") ? value+= 1 : value-= 1;
-    
-    if(value == 0) return;
+	value = name == "+" ? (value += 1) : (value -= 1);
 
-    amountCounter.forEach(elem => { elem.innerHTML = value });
+	if (value == 0) return;
+
+	amountCounter.forEach((elem) => {
+		elem.innerHTML = value;
+	});
 }
 
 function productChangeAmount() {
-    let name = this.innerHTML;
-    let value = +productAmounCounterElem.innerHTML;
+	let name = this.innerHTML;
+	let value = +productAmounCounterElem.innerHTML;
 
-    value = (name == "+") ? value+= 1 : value-= 1;
+	value = name == "+" ? (value += 1) : (value -= 1);
 
-    if(value == 0) return;
+	if (value == 0) return;
 
-    productAmounCounterElem.innerHTML = value;
+	productAmounCounterElem.innerHTML = value;
 }
