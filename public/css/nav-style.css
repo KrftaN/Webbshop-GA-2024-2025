@@ -1,13 +1,16 @@
 /*====== Global style ======*/
-/*.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}*/
+@font-face {
+	font-family: "poppinsregular";
+	src: url("../webkit/poppins-regular-webfont.woff2") format("woff2"),
+		url("../webkit/poppins-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 
 body {
     margin: 0;
+    font-family: poppinsregular;
+    line-height: 1.2;
 }
 
 .wrapper {
