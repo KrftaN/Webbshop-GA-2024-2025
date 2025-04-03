@@ -1,13 +1,16 @@
 /*====== Global style ======*/
-/*.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}*/
+@font-face {
+	font-family: "poppinsregular";
+	src: url("../webkit/poppins-regular-webfont.woff2") format("woff2"),
+		url("../webkit/poppins-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 
 body {
     margin: 0;
+    font-family: poppinsregular;
+    line-height: 1.2;
 }
 
 .wrapper {
@@ -16,7 +19,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(#ffffff, #e9e9e9, #e4e4e4, #d3d3d3);
+    background-image: linear-gradient(#ffffff, #f1f1f1, #eeeeee);
 }
 
 /*====== Nav style ========*/
@@ -28,13 +31,6 @@ header,
 header ul,
 header input {
     background-color: transparent;
-}
-
-header nav > {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 header nav a + a {
@@ -56,7 +52,7 @@ header nav > ul:first-child li img{
 }
 
 header nav > ul:first-child li:first-child img {
-    width: 65px;
+    width: 60px;
 }
 
 header nav > ul:first-child li.search {
@@ -166,6 +162,7 @@ header nav > ul:last-child li {
     height: 65px;
     border: 1px solid black;
     margin: 7px;
+    border-radius: 6px;
 }
 
 header nav > ul:last-child li:first-child img{
@@ -225,6 +222,10 @@ header nav > ul:last-child li a{
         justify-content: center;
         flex-direction: row;
         width: 100%;
+    }
+
+    header nav > ul:last-child li:nth-child(3) {
+        display: none;
     }
     
     header nav > ul:first-child li a img {
@@ -286,6 +287,7 @@ header nav > ul:last-child li a{
 
     header nav > ul:last-child li {
         width: 17vw;
+        display: flex;
     }
 
     header nav > ul:last-child li a {
@@ -322,6 +324,7 @@ header nav > ul:last-child li a{
         border-color: #000;
         border-width: 1px;
         border-style: solid;
+        border-radius: 5px;
     }
     
     header nav > ul:last-child li a{
