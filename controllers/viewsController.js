@@ -1,7 +1,7 @@
 const { catchAsync } = require("../utils/catchAsync");
-const { formatManufacturerName } = require("../utils/formatManufacturerName");
 const Product = require("../models/productModel");
 const User = require("../models/userModel");
+const Cart = require("../models/cartModel");
 const crypto = require("crypto");
 
 exports.getIndex = (req, res) => {
@@ -33,12 +33,12 @@ exports.getForgot = (req, res) => {
 };
 
 exports.getShop = catchAsync(async (req, res) => {
-	const Products = await Product.find();
+	const products = await Product.find();
 	res.status(200).render("shop", {
 		pageStyles: "shop",
 		title: "Shop",
-		Products,
-		noStandard: true,
+		products,
+		noStandard: false,
 	});
 });
 
@@ -46,13 +46,11 @@ exports.getProductPage = catchAsync(async (req, res) => {
 	const id = req.params.id;
 	let product = await Product.findById(id);
 
-	product.formattedName = formatManufacturerName(product.manufacturer); //Lägger till det formaterade productentnamnet för att stödja filformatet;
-	product.kylvara = `${product.requiresFridge ? "Ja" : "Nej"}`;
-
 	res.status(200).render("productPage", {
-		pageStyles: "produkt-style",
+		pageStyles: "product-style",
 		title: `${product.name}`,
 		product,
+		noStandard: false,
 	});
 });
 
@@ -73,12 +71,17 @@ exports.getAboutUs = (req, res) => {
 	});
 };
 
-exports.getShoppingCart = (req, res) => {
+exports.getShoppingCart = catchAsync(async (req, res) => {
+	const userId = req.user.id;
+	const userCart = await Cart.findOne({ userId });
+	const cart = userCart.products;
+
 	res.status(200).render("shoppingCart", {
 		pageStyles: "shopping-cart-style",
 		title: "Kundvagn",
+		cart,
 	});
-};
+});
 
 exports.getResetPassword = catchAsync(async (req, res) => {
 	const token = req.params.token;
@@ -93,7 +96,7 @@ exports.getResetPassword = catchAsync(async (req, res) => {
 	if (!user) return getError(req, res, "Sidan kunde inte hittas", 404);
 
 	res.status(200).render("resetPassword", {
-		pageStyles: "nytt-lösenord-style",
+		pageStyles: "new-password",
 		token,
 		title: `Återställ lösenord`,
 	});
@@ -109,10 +112,7 @@ exports.getNewProduct = (req, res) => {
 exports.confirmEmail = catchAsync(async (req, res) => {
 	const token = req.params.token;
 
-	const emailConfirmationToken = crypto
-		.createHash("sha256")
-		.update(req.params.token)
-		.digest("hex");
+	const emailConfirmationToken = crypto.createHash("sha256").update(token).digest("hex");
 
 	const user = await User.findOne({
 		emailConfirmationToken,
@@ -124,7 +124,7 @@ exports.confirmEmail = catchAsync(async (req, res) => {
 	if (!user) return getError(req, res, "Sidan kunde inte hittas", 404);
 
 	res.status(200).render("confirmEmail", {
-		pageStyles: "bekräfta-mail-style",
+		pageStyles: "confirm-email",
 		title: "Bekräfta email",
 		token,
 	});

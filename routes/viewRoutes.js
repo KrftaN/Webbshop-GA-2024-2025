@@ -24,10 +24,10 @@ router.get("/logga-in", redirectIfLoggedIn, getLogin);
 router.get("/registrera", redirectIfLoggedIn, getSignup);
 router.get("/glomt-losenord", redirectIfLoggedIn, getForgot);
 router.get("/shop", getShop);
-router.get("/produkter/:id", getProductPage);
+router.get("/produkt/:id", getProductPage);
 router.get("/aterstall-losenord/:token", getResetPassword);
 router.get("/bekrafta-email/:token", confirmEmail);
 router.get("/om-oss", getAboutUs);
-router.get("/kundvagn", getShoppingCart);
+router.get("/kundvagn", protect, getShoppingCart);
 
 module.exports = router;

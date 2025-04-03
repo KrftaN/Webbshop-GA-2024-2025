@@ -8,24 +8,27 @@ html(lang="sv")
         link(rel="stylesheet", type="text/css", href=`/css/${pageStyles}.css`)        
         link(href="../css/nav-style.css", rel="stylesheet")
         link(href="../css/footer-style.css", rel="stylesheet")
-        script(src="../scripts/script.js", defer)
+        script(src="../scripts/navbar.js", defer)
+        script(src="../scripts/numberSelect.js", defer)
 
 
     body 
-        unless noStandard === true
-            include _header
-        
-        block content
+        div.wrapper
+            unless noStandard === true
+                include _header
+            
+            block content
 
-        unless noStandard === true
-            include _footer
+            unless noStandard === true
+                include _footer
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js')
-        //script(type='module' src='/script/navbar.js')
-        //script(type='module' src='/script/alerts.js')
-        //script(type='module' src='/script/login.js')
-        //script(type='module' src='/script/signup.js')
-        //script(type='module' src='/script/logout.js')
-        //script(type='module' src='/script/resetPassword.js')
-        //script(type='module' src='/script/forgotPassword.js')
-        //script(type='module' src='/script/index.js')       
+        script(type='module' src='/scripts/alerts.js')
+        script(type='module' src='/scripts/login.js')
+        script(type='module' src='/scripts/signup.js')
+        script(type='module' src='/scripts/logout.js')
+        script(type='module' src='/scripts/resetPassword.js')
+        script(type='module' src='/scripts/forgotPassword.js')
+        script(type='module' src='/scripts/script.js')  
+        script(type='module' src='/scripts/addToCart.js')     
+               

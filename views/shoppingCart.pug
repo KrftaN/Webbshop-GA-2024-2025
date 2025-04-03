@@ -4,59 +4,50 @@ block content
     main
         h2 Din varukorg
         section
-            article
-                section
-                    img(src="../src/assets/logga.png", alt="Produkt")
+            each item in cart
+                article
                     section
-                        h3 Produktnamn
-                        p Prdoucentnamn
-                        a(href="#") Ta bort X
-                section
-                    form(action="#")
-                        fieldset
-                            button#button-decrease -
-                            p#amount-counter 1
-                            button#button-increase +
-                        p 100kr/hg
-                p 200 kr
-            article
-                section
-                    img(src="../src/assets/logga.png", alt="Produkt")
+                        img(src=`/src/products/${item.product._id}.jpg`, alt=item.product.name)
+                        section
+                            h3 #{item.product.name}
+                            p #{item.product.manufacturer}
+                            a(href="#") Ta bort X
                     section
-                        h3 Produktnamn
-                        p Prdoucentnamn
-                        a(href="#") Ta bort X
-                section
-                    form(action="#")
-                        fieldset
-                            button#button-decrease -
-                            p#amount-counter 1
-                            button#button-increase +
-                        p 100kr/hg
-                p 200 kr
+                        form.form1(action="#" method="post")
+                            fieldset
+                                button.sc-button-minus -
+                                p.sc-amount-counter #{item.quantity}
+                                button.sc-button-plus +
+                            p #{item.product.price}kr
+                    p #{item.product.price * item.quantity}
+
             table
                 thead
                     tr
-                        th(scope="col") Prudokt
+                        th(scope="col") Produkt
                         th(scope="col") Pris
                         th(scope="col") Kvantitet
                         th(scope="col") Summa
                 tbody
-                    tr
-                        th(scope="row")
-                            img(src="../src/assets/logga.png", alt="Produkt")
-                            section
-                                h3 Produktnamn
-                                p Prdoucentnamn
-                                a(href="#") Ta bort X
-                        td 100kr/hg
-                        td
-                            form(action="#")
-                                fieldset
-                                    button#button-decrease -
-                                    p#amount-counter 1
-                                    button#button-increase +
-                        td 200kr
+                    each item in cart
+                        tr
+                            th(scope="row")
+                                img(src=`/src/products/${item.product._id}.jpg`, alt=item.product.name)
+                                section
+                                    h3 #{item.product.name}
+                                    p #{item.product.manufacturer}
+                                    a(href="#") 
+                                        form.remove-from-cart(action="#" method="post")
+                                            button(type="submit") Ta bort X
+                                            input#id(type="hidden", name="id", value=`${item.product._id}`)
+                            td #{item.product.price}
+                            td
+                                form.form1(action="#" method="post")
+                                    fieldset
+                                        button.sc-button-minus -
+                                        p.sc-amount-counter #{item.quantity}
+                                        button.sc-button-plus +
+                            td #{item.product.price * item.quantity}
         form(action="#")
             fieldset
                 legend Fraktmetod
@@ -84,9 +75,9 @@ block content
             h3 Summering
             section
                 p Frakt: 
-                p 99 kr
+                p 69 kr
                 p Totalt: 
-                p 449 kr
+                p 400
             button Frakt
         form(action="#")
             legend Fraktinformation

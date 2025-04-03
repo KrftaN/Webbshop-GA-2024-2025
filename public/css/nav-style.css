@@ -1,11 +1,43 @@
-header nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/*====== Global style ======*/
+@font-face {
+	font-family: "poppinsregular";
+	src: url("../webkit/poppins-regular-webfont.woff2") format("woff2"),
+		url("../webkit/poppins-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
-header nav ul:first-child {
+body {
+    margin: 0;
+    font-family: poppinsregular;
+    line-height: 1.2;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#ffffff, #f1f1f1, #eeeeee);
+}
+
+/*====== Nav style ========*/
+h1 {
+    display: none;
+}
+
+header, 
+header ul,
+header input {
+    background-color: transparent;
+}
+
+header nav a + a {
+    display: none;
+}
+
+header nav > ul:first-child {
     padding-inline-start: 0;
     list-style-type: none;
     display: flex;
@@ -15,38 +47,104 @@ header nav ul:first-child {
     width: 100%;
 }
 
-header nav ul:first-child li a img {
+header nav > ul:first-child li img{
     width: 50px;
-    border: 1px solid black;
 }
 
-header nav ul:first-child li.search {
+header nav > ul:first-child li:first-child img {
+    width: 60px;
+}
+
+header nav > ul:first-child li.search {
     display: none;
 }
 
-header nav ul:first-child li > p {
+header nav > ul:first-child li > p {
     display: none;
 }
 
-header nav ul:first-child li:nth-child(4) {
+header nav > ul:first-child li:nth-child(4) {
     display: none;
     padding: 15px;
 }
 
-header nav ul:first-child li:nth-child(4) a {
+header nav > ul:first-child li:nth-child(3) a {
+    font-size: 1.2em;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+
+header nav > ul:first-child li:nth-child(3) p {
+    text-align: center;
+    display: none;
+}
+
+header nav > ul:first-child li:nth-child(4) a {
     text-decoration: none;
     color: #000;
     font-size: 1.4em;
 }
 
-header nav ul:last-child {
+.dropdownLoggaIn {
+	margin-left: -40px;
+    z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: top;
+	position: absolute;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	width: 140px;
+	transition: transform 0.3s ease, visibility 0s linear 0.3s, opacity 0.3s ease;
+	backdrop-filter: blur(10px);
+}
+
+.dropdownLoggaIn li {
+	width: fit-content;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	list-style-type: none;
+}
+
+.dropdownLoggaIn li a {
+	width: 90px;
+	padding: 10px;
+	display: block;
+}
+
+.dropdownLoggaIn li a:hover,
+.dropdownLoggaIn button:hover {
+	background-color: #838383;
+	border-radius: 7px;
+}
+
+.loggedIn:hover .dropdownLoggaIn,
+.dropdownLoggaIn:hover {
+	visibility: visible;
+	opacity: 1;
+	transform: scaleY(1);
+	transition-delay: 0s;
+}
+
+.dropdownLoggaIn button {
+	background-color: inherit;
+	color: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	padding: 20px;
+	border: none;
+}
+
+header nav > ul:last-child {
     position: fixed;
     right: -100%;
     top: 0;
     height: 100vh;
     margin: 0;
     padding-top: 10px;
-    background-color: #f3f3f3;
     list-style-type: none;
     width: 80%;
     padding-inline-start: 0;
@@ -54,42 +152,45 @@ header nav ul:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f3f1f1;
+    opacity: 0.9;
 }
 
-header nav ul:last-child li {
+header nav > ul:last-child li {
     text-decoration: none;
     width: 90%;
-    height: 70px;
+    height: 65px;
     border: 1px solid black;
     margin: 7px;
+    border-radius: 6px;
 }
 
-header nav ul:last-child li:first-child img{
+header nav > ul:last-child li:first-child img{
     width: 50px;
 }
 
-header nav ul:last-child li:first-child a {
+header nav > ul:last-child li:first-child a {
     padding: 0;
     height: fit-content;
 }
 
-header nav ul:last-child li:first-child {
+header nav > ul:last-child li:first-child {
     border: none;
     display: flex;
     justify-content: flex-end;
     height: fit-content;
 }
 
-header nav ul:last-child li:nth-child(2) {
+header nav > ul:last-child li:nth-child(2) {
     height: fit-content;
 }
 
-header nav ul:last-child li:nth-child(2) form {
+header nav > ul:last-child li:nth-child(2) form {
     width: 100%;
     height: 40px;
 }
 
-header nav ul:last-child li:nth-child(2) form input[type="text"] {
+header nav > ul:last-child li:nth-child(2) form input[type="text"] {
     width: 97%;
     height: 100%;
     padding: 0;
@@ -98,7 +199,7 @@ header nav ul:last-child li:nth-child(2) form input[type="text"] {
     font-size: 1.15em;
 }
 
-header nav ul:last-child li a{
+header nav > ul:last-child li a{
     display: block;
     text-decoration: none;
     color: #000;
@@ -107,27 +208,39 @@ header nav ul:last-child li a{
     padding: 20px;
 }
 
+@media screen and (min-width: 600px) {
+    header nav > ul:first-child {
+        gap: 50px;
+    }
+}
+
 @media screen and (min-width: 900px) {
-    header nav ul:first-child {
+    header nav > ul:first-child {
         padding-inline-start: 0;
         list-style-type: none;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-direction: row;
-        gap: 10px;
         width: 100%;
     }
+
+    header nav > ul:last-child li:nth-child(3) {
+        display: none;
+    }
     
-    header nav ul:first-child li a img {
+    header nav > ul:first-child li a img {
         width: 50px;
-        border: 1px solid black;
     }
 
-    header nav ul:first-child li.search {
+    header nav > ul:first-child li.search {
         display: block;
     }
 
-    header nav ul:first-child li:nth-child(3) {
+    header nav a + a {
+        display: block;
+    }
+
+    header nav > ul:first-child li:nth-child(3) {
         display: flex;
         flex-direction: row;
         width: 150px;
@@ -135,64 +248,75 @@ header nav ul:last-child li a{
         align-items: center;
     }
 
-    header nav ul:first-child li:nth-child(3) p {
+    header nav > ul:first-child li:nth-child(3) p {
         margin: 0;
         font-size: 1.1em;
     }
 
-    header nav ul:first-child li > p {
+    header nav > ul:first-child li:nth-child(3) p {
         display: block;
     }
 
-    header nav ul:first-child li:nth-child(4) {
+    header nav > ul:first-child li > p {
         display: block;
+    }
+
+    header nav > ul:first-child li:nth-child(4) {
+        display: block;
+    }
+
+    .dropdownLoggaIn {
+        margin-top: 140px;
+    	margin-left: -10px;
     }
 
     #show-navigation {
         display: none;
     }
 
-    header nav ul:last-child {
+    header nav > ul:last-child {
         display: flex;
         position: relative;
         right: 0;
         flex-direction: row;
         width: 100%;
         height: 100px;
-        background-color: #fff;
         justify-content: center;
+        background-color: transparent;
     }
 
-    header nav ul:last-child li {
-        width: 230px;
+    header nav > ul:last-child li {
+        width: 17vw;
+        display: flex;
     }
 
-    header nav ul:last-child li a {
+    header nav > ul:last-child li a {
         width: fit-content;
         margin: auto;
     }
 
-    header nav ul:last-child li.search {
+    header nav > ul:last-child li.search {
         display: none;
     }
 
-    header nav ul:last-child li:first-child {
+    header nav > ul:last-child li:first-child {
         display: none;
     }
 
-    header nav ul:last-child li:first-child {
+    header nav > ul:last-child li:first-child {
         height: fit-content;
     }
     
-    header nav ul:last-child li:first-child form {
+    header nav > ul:last-child li:first-child form {
         width: 100%;
         height: 40px;
     }
     
-    header nav ul:first-child li:nth-child(2) form input[type="text"] {
+    header nav > ul:first-child li:nth-child(2) form input[type="text"] {
         width: 250px;
         height: 40px;
         padding: 0;
+        margin: 10px;
         padding-inline-start: 2%;
         border-width: 0;
         font-size: 1.15em;
@@ -200,14 +324,25 @@ header nav ul:last-child li a{
         border-color: #000;
         border-width: 1px;
         border-style: solid;
+        border-radius: 5px;
     }
     
-    header nav ul:last-child li a{
+    header nav > ul:last-child li a{
         display: block;
         text-decoration: none;
         color: #000;
         font-size: 1.3em;
         height: 35px;
         padding: 20px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    header nav > ul:first-child {
+        justify-content: space-evenly;
+    }
+
+    header nav > ul:last-child li {
+        width: 220px;
     }
 }
