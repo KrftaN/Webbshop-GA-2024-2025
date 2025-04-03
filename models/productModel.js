@@ -6,6 +6,7 @@ const productSchema = new mongoose.Schema({
 		type: String,
 		required: [true, "Du måste inkludera en beskrivning till produkten!"],
 	},
+	manufacturer: { type: String, required: [true, "Ogiltigt producent!"] },
 	price: {
 		type: Number,
 		required: [true, "Du måste inkludera ett pris!"],

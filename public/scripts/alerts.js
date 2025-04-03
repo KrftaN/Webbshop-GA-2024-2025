@@ -5,6 +5,8 @@ export const hideAlert = () => {
 };
 
 export const showAlert = (type, msg, time = 7) => {
+	console.log(type, msg, (time = 7));
+
 	hideAlert();
 
 	const markup = `<div class="alert alert--${type}">${msg}</div>`;

@@ -4,6 +4,8 @@ import { logout } from "./logout.js";
 import { resetPassword } from "./resetPassword.js";
 import { forgotPassword } from "./forgotPassword.js";
 import { confirmEmail } from "./confirmEmail.js";
+import { addToCart } from "./addToCart.js";
+import { removeFromCart } from "./removeFromCart.js";
 
 // Set up a response interceptor
 axios.interceptors.response.use(
@@ -45,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Function to check if an element with a given ID exists
 	const getElementById = (id) => document.getElementById(id);
-
 	const loginForm = getElementById("log-in-form");
 	const signUpForm = getElementById("sign-up-form");
 	const logOutForm = getElementById("log-out-form");
@@ -53,7 +54,28 @@ document.addEventListener("DOMContentLoaded", function () {
 	const resetPasswordForm = getElementById("reset-password-form");
 	const confirmEmailForm = getElementById("confirm-email-form");
 
-	// Check if the required forms exist before adding event listeners
+	// Attach event listeners to all "add to cart" forms
+	const addToCartForms = document.querySelectorAll(".add-to-cart");
+	addToCartForms.forEach((form) => {
+		form.addEventListener("submit", function (e) {
+			e.preventDefault();
+			const productId = form.querySelector("input[name='id']").value;
+
+			addToCart(productId, 1);
+		});
+	});
+
+	const removeFromCartForms = document.querySelectorAll(".remove-from-cart");
+
+	removeFromCartForms.forEach((form) => {
+		form.addEventListener("submit", function (e) {
+			e.preventDefault();
+			const productId = form.querySelector("input[name='id']").value;
+
+			removeFromCart(productId);
+		});
+	});
+
 	if (loginForm) {
 		loginForm.addEventListener("submit", function (e) {
 			e.preventDefault();

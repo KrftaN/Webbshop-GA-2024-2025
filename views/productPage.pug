@@ -7,12 +7,14 @@ block content
 			section
 				h2 #{product.name}
 				p #{product.price}kr
-				form(action="#")
+				form.add-to-cart(action="#")
 					fieldset
 						button#button-decrease -
 						p#amount-counter 1
 						button#button-increase +
 					button(type="submit") Lägg till i varukorgen
+					input#id(type="hidden", name="id", value=`${product._id}`)
+
 				ul
 					li
 						img(src="../src/assets/logga.png", alt="Bild")

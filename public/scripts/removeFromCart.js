@@ -1,10 +1,12 @@
 import { showAlert } from "./alerts.js";
-export const login = async (email, password, keepLoggedIn) => {
+export const removeFromCart = async (productId) => {
 	try {
+		const quantity = 1000;
+
 		await axios({
-			method: "POST",
-			url: `http://localhost:3000/api/v1/users/login`,
-			data: { email, password, keepLoggedIn },
+			method: "DELETE",
+			url: `http://localhost:3000/api/v1/cart`,
+			data: { productId, quantity },
 			debug: false,
 		});
 

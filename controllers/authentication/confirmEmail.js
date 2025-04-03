@@ -2,6 +2,7 @@ const { catchAsync } = require("../../utils/catchAsync");
 const User = require("../../models/userModel");
 const AppError = require("../../utils/appError");
 const crypto = require("crypto");
+const { createAndSendToken } = require("../../utils/createAndSendToken");
 
 exports.confirmEmail = catchAsync(async (req, res, next) => {
 	const emailConfirmationToken = crypto

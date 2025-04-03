@@ -1,54 +1,43 @@
-let buttonDecreaseElem;
-let amountCounterElem;
-let buttonIncreaseElem;
+document.addEventListener("DOMContentLoaded", () => {
+	const buttonDecreaseElems = document.querySelectorAll(".sc-button-minus");
+	const buttonIncreaseElems = document.querySelectorAll(".sc-button-plus");
+	const productAmountCounterElem = document.getElementById("amount-counter");
+	const productButtonDecreaseElem = document.getElementById("button-minus");
+	const productButtonIncreaseElem = document.getElementById("button-plus");
 
-let productButtonDecreaseElem;
-let productButtonIncreaseElem;
-let productAmounCounterElem;
+	buttonDecreaseElems.forEach((btn) => btn.addEventListener("click", updateAmount));
+	buttonIncreaseElems.forEach((btn) => btn.addEventListener("click", updateAmount));
 
-function init() {
-	buttonDecreaseElem = document.getElementsByClassName("sc-button-minus");
-	buttonIncreaseElem = document.getElementsByClassName("sc-button-plus");
-	amountCounterElem = document.getElementsByClassName("sc-amount-counter");
+	productButtonDecreaseElem?.addEventListener("click", updateProductAmount);
+	productButtonIncreaseElem?.addEventListener("click", updateProductAmount);
 
-	productAmounCounterElem = document.getElementById("amount-counter");
-	productButtonDecreaseElem = document.getElementById("button-minus");
-	productButtonIncreaseElem = document.getElementById("button-plus");
+	function updateAmount(event) {
+		event.preventDefault(); // Prevent default button behavior
 
-	Array.from(buttonDecreaseElem).forEach((elem) => {
-		elem.addEventListener("click", changeAmount);
-	});
-	Array.from(buttonIncreaseElem).forEach((elem) => {
-		elem.addEventListener("click", changeAmount);
-	});
+		// Find the closest form and its corresponding counter
+		const form = this.closest("form");
+		const amountCounter = form.querySelector(".sc-amount-counter");
 
-	productButtonDecreaseElem.addEventListener("click", productChangeAmount);
-	productButtonIncreaseElem.addEventListener("click", productChangeAmount);
-}
-window.onload = init();
+		if (!amountCounter) return; // Ensure there's a counter to update
 
-function changeAmount() {
-	let form = this.form.className;
-	let name = this.innerHTML;
-	let amountCounter = document.querySelectorAll(`.${form} .sc-amount-counter`);
-	let value = +amountCounter[0].innerHTML;
+		const isIncrease = this.classList.contains("sc-button-plus");
+		let value = parseInt(amountCounter.textContent, 10) || 0;
 
-	value = name == "+" ? (value += 1) : (value -= 1);
+		value = isIncrease ? value + 1 : value - 1;
+		if (value < 1) return;
 
-	if (value == 0) return;
+		amountCounter.textContent = value;
+	}
 
-	amountCounter.forEach((elem) => {
-		elem.innerHTML = value;
-	});
-}
+	function updateProductAmount(event) {
+		event.preventDefault(); // Prevent default button behavior
 
-function productChangeAmount() {
-	let name = this.innerHTML;
-	let value = +productAmounCounterElem.innerHTML;
+		const isIncrease = this.classList.contains("sc-button-plus");
+		let value = parseInt(productAmountCounterElem.textContent, 10) || 0;
 
-	value = name == "+" ? (value += 1) : (value -= 1);
+		value = isIncrease ? value + 1 : value - 1;
+		if (value < 1) return;
 
-	if (value == 0) return;
-
-	productAmounCounterElem.innerHTML = value;
-}
+		productAmountCounterElem.textContent = value;
+	}
+});

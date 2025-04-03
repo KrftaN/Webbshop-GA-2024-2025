@@ -2,7 +2,6 @@ const { catchAsync } = require("../../utils/catchAsync");
 const Cart = require("../../models/cartModel");
 const Product = require("../../models/productModel");
 const AppError = require("../../utils/appError");
-const mongoose = require("mongoose");
 
 exports.removeFromCart = catchAsync(async (req, res, next) => {
 	const { productId, quantity } = req.body;
@@ -30,5 +29,6 @@ exports.removeFromCart = catchAsync(async (req, res, next) => {
 
 	res.status(204).json({
 		status: "success",
+		message: `Tog bort ${quantity}st ${product.name}`,
 	});
 });
