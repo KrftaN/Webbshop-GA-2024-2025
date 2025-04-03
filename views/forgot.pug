@@ -3,7 +3,7 @@ extends base
 block content 
     main
         .form
-            form(action="index.html", method="post")
+            form#forgot-password-form(action="index.html", method="post")
                 h2 Glömt Lösernord
                 label(for="email") E-post:
                 input#email(type="email", name="email", placeholder="Ange din e-postadress", required)

@@ -3,7 +3,7 @@ export const resetPassword = async (password, passwordConfirm, token) => {
 	try {
 		await axios({
 			method: "PATCH",
-			url: `https://localhost:3000/api/v1/users/resetPassword/${token}`,
+			url: `http://localhost:3000/api/v1/users/resetPassword/${token}`,
 			data: { password, passwordConfirm },
 			debug: false,
 		});

@@ -3,7 +3,7 @@ export const forgotPassword = async (email) => {
 	try {
 		await axios({
 			method: "POST",
-			url: `https://localhost:3000/api/v1/users/forgotPassword`,
+			url: `http://localhost:3000/api/v1/users/forgotPassword`,
 			data: { email },
 			debug: false,
 		});

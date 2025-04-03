@@ -72,6 +72,8 @@ block content
 								h3 #{product.name}
 								p #{product.price}
 								p Lorem ipsum dolor sit amet et delectus
-							form(action="#")
+							form.add-to-cart(action="#", method="post")
 								button(type="submit") Lägg till i varukorgen 🛒
+								input#id(type="hidden", name="id", value=`${product._id}`)
+
 					
